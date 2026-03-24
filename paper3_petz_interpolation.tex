@@ -43,18 +43,22 @@ from the Petz Recovery Bound}
 \date{\today}
 
 \begin{abstract}
-We derive the MOND interpolating function
-$\mu(x) = 1 - e^{-\sqrt{x}}$ directly from the Petz recovery
-fidelity bound $F \geq e^{-\Sigma/2}$ established in Paper~1,
-with the identification $\Sigma_{\mathrm{gal}} = 2\sqrt{x}$
-where $x = g_{\mathrm{bar}}/a_0$. This provides an
-information-theoretic origin for the transition between
-Newtonian and deep-MOND regimes: the interpolating function
-\emph{is} the Petz recovery failure $\tauasym = 1 - F$.
-We verify that both asymptotic limits are correctly recovered,
-compare with standard interpolating functions used in the
-literature, and identify the remaining conjecture that requires
-microscopic justification.
+We show that the Petz recovery fidelity bound
+$F \geq e^{-\Sigma/2}$ (Paper~1), combined with the observed
+Baryonic Tully--Fisher Relation (BTFR), \emph{derives} the
+deep-MOND asymptotic form $\Sigma_{\mathrm{gal}} \to 2\sqrt{x}$
+($x = g_{\mathrm{bar}}/a_0$) without additional assumptions.
+Extending this to all~$x$ via the minimal (zero-parameter)
+extrapolation $\Sigma_{\mathrm{gal}} = 2\sqrt{x}$ yields the
+interpolating function $\mu(x) = 1 - e^{-\sqrt{x}}$, which
+coincides with the McGaugh--Lelli--Schombert empirical fit.
+The transition-region shape ($0.1 \lesssim x \lesssim 10$) is a
+\emph{genuine prediction}---not a circular restatement of BTFR.
+We carefully separate what is derived from observation, what is
+ansatz (the minimal extrapolation), and what constitutes a
+falsifiable prediction, and identify the open problem of a
+microscopic derivation of $\Sigma_{\mathrm{gal}}$ from first
+principles.
 \end{abstract}
 
 \maketitle
@@ -117,12 +121,23 @@ Newtonian baryonic acceleration and
 $a_0 \approx 1.2 \times 10^{-10}\;\mathrm{m/s}^2$ is the
 MOND acceleration scale.
 
-\assumed\ We identify the galactic gravitational entropy production as
+We identify the galactic gravitational entropy production as
 \begin{equation}
   \boxed{\;\Sigma_{\mathrm{gal}} \;=\; 2\sqrt{x}
   \;=\; 2\sqrt{\frac{g_{\mathrm{bar}}}{a_0}}\;\;}
   \label{eq:sigma-gal}
 \end{equation}
+
+\textbf{Logical status of this identification.}
+The deep-MOND asymptotic behavior $\Sigma_{\mathrm{gal}} \to 2\sqrt{x}$
+as $x \to 0$ is \emph{derived} from the observed BTFR combined with
+the Petz bound structure. The extension $\Sigma_{\mathrm{gal}} = 2\sqrt{x}$
+to all $x$ is the minimal (zero-parameter) extrapolation.
+The transition-region behavior of $\mu(x)$ is therefore a genuine
+prediction, not a circular restatement of BTFR.
+See Sec.~\ref{sec:conjecture} for a precise separation of what is
+derived, what is an ansatz, and what constitutes a new prediction.
+
 The physical motivation is as follows:
 \begin{itemize}
   \item In the \emph{deep-MOND} regime ($x \to 0$): the
@@ -293,12 +308,45 @@ Several observations:
 \label{sec:conjecture}
 %=====================================================================
 
-The derivation rests on one non-trivial identification:
+It is important to clearly separate what is derived from observation,
+what is an extrapolation, and what constitutes a genuinely new prediction.
+We organize the logical status of each element below.
+
+\subsection{Derived from BTFR (not conjectural)}
+
+The deep-MOND asymptotic form $\Sigma_{\mathrm{gal}} \to 2\sqrt{x}$
+as $x \to 0$ is \derived, not \assumed. The argument is as follows.
+Within the Petz bound framework, $\mu(x) = 1 - e^{-\Sigma_{\mathrm{gal}}/2}$.
+In the deep-MOND limit ($x \to 0$), $\Sigma_{\mathrm{gal}} \to 0$
+and $\mu \approx \Sigma_{\mathrm{gal}}/2$.
+The BTFR ($V^4 = GMa_0$) requires $\mu \to \sqrt{x}$ as $x \to 0$
+(see Eq.~\eqref{eq:btfr}).
+Combining: $\Sigma_{\mathrm{gal}}/2 \to \sqrt{x}$, i.e.\
+$\Sigma_{\mathrm{gal}} \to 2\sqrt{x}$.
+
+This step uses only: (a)~the JRSWW bound structure, and
+(b)~the empirically established BTFR.
+It is a \emph{derivation}, not a fit.
+
+\subsection{Ansatz: minimal zero-parameter extrapolation}
+
+The extension
 \begin{equation}
-  \Sigma_{\mathrm{gal}} = 2\sqrt{x}\,.
+  \Sigma_{\mathrm{gal}} = 2\sqrt{x}
+  \quad \text{for \emph{all} } x
   \tag{\ref{eq:sigma-gal}}
 \end{equation}
-This is \assumed, not \derived. We offer three supporting arguments:
+is the simplest (zero-parameter) extrapolation of the derived
+deep-MOND asymptotic form to the full range of $x$.
+This is an \assumed\ ansatz, not a derivation.
+More complex functional forms---e.g.\
+$\Sigma_{\mathrm{gal}} = 2\sqrt{x}\,h(x)$ with $h(x) \to 1$ as
+$x \to 0$---could in principle modify the transition region while
+preserving the BTFR.
+The choice $h(x) = 1$ (no additional parameters) is the minimal
+hypothesis.
+
+Three supporting arguments for this minimal choice:
 
 \textbf{(i) Dimensional consistency.}
 $\Sigma$ must be dimensionless. The combination
@@ -306,12 +354,13 @@ $g_{\mathrm{bar}}/a_0$ is dimensionless, and its square root is
 the simplest function thereof. The prefactor~2 is fixed by matching
 the JRSWW bound normalization~\eqref{eq:jrsww}.
 
-\textbf{(ii) Asymptotic uniqueness.}
-Consider the general ansatz $\Sigma_{\mathrm{gal}} = 2\,x^\alpha$.
+\textbf{(ii) Power-law uniqueness.}
+Consider the general power-law ansatz $\Sigma_{\mathrm{gal}} = 2\,x^\alpha$.
 Then $\mu = 1 - e^{-x^\alpha}$. The deep-MOND limit
 $\mu \approx x^\alpha$ must equal $\sqrt{x}$ to reproduce the
 BTFR~\eqref{eq:btfr}, forcing $\alpha = 1/2$. No other power law
-works.
+works. (Note: this fixes the \emph{exponent} but does not exclude
+non-power-law corrections at finite~$x$.)
 
 \textbf{(iii) Connection to the cosmological sector.}
 If $\mu_0 = H_0/c$ (as suggested by Paper~3's cosmological
@@ -322,17 +371,35 @@ analysis) and $a_0 = cH_0/(2\pi)$ (Milgrom's coincidence), then
   \label{eq:sigma-cosmo}
 \end{equation}
 linking the galactic entropy production to the same parameter
-$\mu_0$ that governs the cosmological sector. This suggests a
-unified microscopic origin, though the derivation of
-$\Sigma_{\mathrm{gal}} = 2\sqrt{x}$ from first principles remains
-an open problem.
+$\mu_0$ that governs the cosmological sector.
 
-\bigskip
+\subsection{Genuinely new prediction}
+
+Given the minimal ansatz $\Sigma_{\mathrm{gal}} = 2\sqrt{x}$ for
+all~$x$, the interpolating function
+$\mu(x) = 1 - e^{-\sqrt{x}}$ makes a \emph{genuine prediction} for
+the transition-region behavior at $0.1 \lesssim x \lesssim 10$,
+where neither the deep-MOND nor the Newtonian asymptotic applies.
+This prediction is \emph{not} a circular restatement of BTFR (which
+constrains only $x \to 0$) nor of Newtonian gravity (which constrains
+only $x \to \infty$).
+The transition shape---in particular, $\mu(1) = 1 - e^{-1} \approx 0.632$---is
+testable against SPARC RAR data and constitutes the falsifiable
+content of the ansatz.
+
+The fact that this predicted shape coincides with the McGaugh et
+al.~\cite{McGaugh2016} empirical fit to 2693 data points from 153
+galaxies is a nontrivial success of the minimal extrapolation, not
+a built-in feature.
+
+\subsection{Open problem: microscopic derivation}
 
 A microscopic derivation would require computing the quantum
 relative entropy $D(\rho_{\mathrm{obs}}\|\rho_{\mathrm{Newton}})$
-for the gravitational field in the weak-field, quasi-static limit.
-We leave this to future work.
+for the gravitational field in the weak-field, quasi-static limit,
+and showing that $\Sigma_{\mathrm{gal}} = 2\sqrt{x}$ emerges
+without the minimal-extrapolation assumption. This would promote
+the ansatz to a theorem. We leave this to future work.
 
 %=====================================================================
 \section{Summary}

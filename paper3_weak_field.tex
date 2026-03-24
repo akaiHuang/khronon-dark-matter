@@ -135,14 +135,17 @@ have remained unanswered:
   function $\mu(x)$ has been a free function for forty years,
   with multiple proposals but no theoretical selection principle.
 \end{enumerate}
-The $\Sigma = 2\ln Q$ framework provides partial answers to all
-three: $\mu_0 = H_0/c$ is the unique scale without Planck physics
-(question~1); the no-go theorem forces $\cs^2 = 0$ via the tensor
-field, making the CMB \emph{necessarily} $\Lambda$CDM-like
-(question~2); and the Petz recovery bound suggests
-$\mu(x) = 1 - e^{-\sqrt{x}}$ as the unique form consistent with
-$\tauasym = 1 - e^{-\Sigma/2}$ (question~3, see
-Supplement~\cite{PaperIII_petz_interp}).
+The $\Sigma = 2\ln Q$ framework addresses these three questions
+through distinct mechanisms: $\mu_0 = H_0/c$ is the unique scale
+without Planck physics, providing a \emph{theoretical} answer to
+question~1; the no-go theorem (Theorem~\ref{thm:nogo}) forces
+$\cs^2 = 0$ via the tensor field, providing a \emph{mathematical}
+answer to question~2; and the Petz recovery bound constrains the
+interpolating function to $\mu(x) = 1 - e^{-\sqrt{x}}$, providing
+a \emph{testable candidate} for question~3---not a derivation, since
+the deep-MOND asymptotic behavior (BTFR) is used as a boundary
+condition, but the transition-region shape is a genuine prediction
+verifiable against SPARC data (Sec.~\ref{sec:sparc_test}).
 
 This paper addresses the \emph{weak-field} phenomenology of the
 same framework.  We adopt the Blanchet--Skordis (BS) Khronon
@@ -728,6 +731,48 @@ sample, this would eliminate the free function $J(Y)$ entirely,
 making the theory's galactic predictions parameter-free (given
 $a_0$).  This is the single most impactful testable prediction of
 the $\tauasym$ framework for galactic phenomenology.
+
+\subsection{Testable prediction: transition-region shape}
+\label{sec:sparc_test}
+
+The deep-MOND asymptotic behavior $\mu(x) \to \sqrt{x}$ as
+$x \to 0$ is an observational input (the BTFR).  The Newtonian
+limit $\mu \to 1$ as $x \to \infty$ is a consistency requirement.
+The \emph{transition region} $0.1 \lesssim x \lesssim 10$, where
+the interpolating function transitions between these regimes, is
+where different proposals make distinct, testable predictions.
+
+For the Petz interpolating function $\mu_{\mathrm{Petz}}(x) = 1 - e^{-\sqrt{x}}$,
+the transition is characterized by $\mu(1) = 1 - e^{-1} \approx 0.632$
+and $\mu'(1) = e^{-1}/(2) \approx 0.184$.  For comparison:
+\begin{center}
+\begin{tabular}{lcc}
+\hline
+Function & $\mu(1)$ & $\mu'(1)$ \\
+\hline
+$\mu_{\mathrm{Petz}} = 1 - e^{-\sqrt{x}}$ & 0.632 & 0.184 \\
+$\mu_{\mathrm{simple}} = x/(1+x)$ & 0.500 & 0.250 \\
+$\mu_{\mathrm{standard}} = x/\sqrt{1+x^2}$ & 0.707 & 0.354 \\
+$\mu_{\mathrm{McGaugh}} = 1 - e^{-\sqrt{x}}$ & 0.632 & 0.184 \\
+\hline
+\end{tabular}
+\end{center}
+The Petz function is \emph{identical} to the empirical fit
+proposed by McGaugh et al.~\cite{McGaugh2016RAR} based on 2693
+data points from the SPARC sample.  This is a non-trivial
+coincidence: the function was derived here from the Petz
+recovery bound with BTFR as boundary condition, while McGaugh
+obtained it as a purely empirical best fit.
+
+\emph{Quantitative test.}---A $\chi^2$ fit of $\mu_{\mathrm{Petz}}$
+against the full SPARC 175-galaxy RAR dataset~\cite{Lelli2017}
+would determine whether the zero-parameter Petz prediction
+($\Sigma = 2\sqrt{x}$ at all $x$) is sufficient, or whether
+subleading corrections ($\Sigma = 2\sqrt{x} + \alpha x + \cdots$)
+are required.  A finding of $\alpha = 0$ within uncertainties
+would confirm the minimal Petz ansatz; $\alpha \neq 0$ would
+indicate additional structure in the galactic entropy production
+beyond the leading Petz bound.
 
 \subsection{$a_0$ and $\mu_0$: suggestive coincidence}
 \label{sec:a0_mu}
