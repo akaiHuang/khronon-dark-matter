@@ -1,0 +1,401 @@
+% paper3_petz_interpolation.tex
+% Supplementary Material: The MOND Interpolating Function from the Petz Recovery Bound
+% Supplement to Paper 3
+% Author: Sheng-Kai Huang
+% Compile: pdflatex paper3_petz_interpolation.tex
+
+\documentclass[prd,twocolumn,superscriptaddress,longbibliography,floatfix]{revtex4-2}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{proposition}{Proposition}
+
+% Convenience macros
+\newcommand{\kB}{k_{\mathrm{B}}}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\tauasym}{\tau}
+
+% Epistemic tags
+\newcommand{\known}{\textsc{[known]}}
+\newcommand{\derived}{\textsc{[derived]}}
+\newcommand{\assumed}{\textsc{[assumed]}}
+\newcommand{\new}{\textsc{[new synthesis]}}
+
+\begin{document}
+
+\title{Supplementary Material: The MOND Interpolating Function\\
+from the Petz Recovery Bound}
+
+\author{Sheng-Kai Huang}
+\email{akai@fawstudio.com}
+\affiliation{Independent Researcher}
+
+\date{\today}
+
+\begin{abstract}
+We derive the MOND interpolating function
+$\mu(x) = 1 - e^{-\sqrt{x}}$ directly from the Petz recovery
+fidelity bound $F \geq e^{-\Sigma/2}$ established in Paper~1,
+with the identification $\Sigma_{\mathrm{gal}} = 2\sqrt{x}$
+where $x = g_{\mathrm{bar}}/a_0$. This provides an
+information-theoretic origin for the transition between
+Newtonian and deep-MOND regimes: the interpolating function
+\emph{is} the Petz recovery failure $\tauasym = 1 - F$.
+We verify that both asymptotic limits are correctly recovered,
+compare with standard interpolating functions used in the
+literature, and identify the remaining conjecture that requires
+microscopic justification.
+\end{abstract}
+
+\maketitle
+
+%=====================================================================
+\section{The Petz recovery bound}
+\label{sec:petz}
+%=====================================================================
+
+We recall the central result of Paper~1~\cite{Huang2025paper1}.
+For any completely positive trace-preserving (CPTP) channel
+$\mathcal{E}$ with entropy production
+\begin{equation}
+  \Sigma \;=\; D\!\left(\rho \,\big\|\,
+  \mathcal{R}_{\mathcal{E}}[\mathcal{E}(\rho)]\right) \geq 0\,,
+  \label{eq:sigma-def}
+\end{equation}
+the Petz recovery fidelity satisfies the
+Junge--Renner--Sutter--Wilde--Winter (JRSWW)
+bound~\cite{JRSWW2018}
+\begin{equation}
+  F\!\left(\rho,\,
+  \mathcal{R}_{\mathcal{E}}[\mathcal{E}(\rho)]\right)
+  \;\geq\; e^{-\Sigma/2}\,.
+  \label{eq:jrsww}
+\end{equation}
+Defining the temporal asymmetry parameter as the Petz recovery
+failure,
+\begin{equation}
+  \tauasym \;=\; 1 - F\,,
+  \label{eq:tau-def}
+\end{equation}
+the bound~\eqref{eq:jrsww} yields an upper envelope
+\begin{equation}
+  \tauasym_{\mathrm{bound}} \;=\;
+  1 - e^{-\Sigma/2}\,.
+  \label{eq:tau-bound}
+\end{equation}
+This is a universal, model-independent inequality: any physical
+process with entropy production $\Sigma$ has its retrodictability
+failure bounded by Eq.~\eqref{eq:tau-bound}. In Paper~1 we showed
+that this single equation, evaluated in different limits, reproduces
+the Crooks fluctuation theorem, Landauer's principle, and the
+gravitational Tolman--Oppenheimer--Volkoff redshift.
+
+%=====================================================================
+\section{Galactic identification}
+\label{sec:galactic}
+%=====================================================================
+
+At galactic scales, the gravitational field produces an entropy
+associated with the deviation of the observed acceleration from
+the Newtonian prediction. We define the standard MOND ratio
+\begin{equation}
+  x \;\equiv\; \frac{g_{\mathrm{bar}}}{a_0}\,,
+  \label{eq:x-def}
+\end{equation}
+where $g_{\mathrm{bar}} = GM_{\mathrm{bar}}/r^2$ is the
+Newtonian baryonic acceleration and
+$a_0 \approx 1.2 \times 10^{-10}\;\mathrm{m/s}^2$ is the
+MOND acceleration scale.
+
+\assumed\ We identify the galactic gravitational entropy production as
+\begin{equation}
+  \boxed{\;\Sigma_{\mathrm{gal}} \;=\; 2\sqrt{x}
+  \;=\; 2\sqrt{\frac{g_{\mathrm{bar}}}{a_0}}\;\;}
+  \label{eq:sigma-gal}
+\end{equation}
+The physical motivation is as follows:
+\begin{itemize}
+  \item In the \emph{deep-MOND} regime ($x \to 0$): the
+    gravitational field deviates maximally from Newton.
+    $\Sigma_{\mathrm{gal}} \to 0$, reflecting that the
+    Petz map can almost fully reconstruct the Newtonian
+    state---the ``retrodiction cost'' per unit acceleration
+    is small when there is almost no baryonic signal.
+  \item In the \emph{Newtonian} regime ($x \to \infty$):
+    $\Sigma_{\mathrm{gal}} \to \infty$, so
+    $\tauasym \to 1$ (saturation), meaning that the
+    Newtonian dynamics is fully ``irreversible'' at the
+    information-theoretic level---no MOND correction is needed.
+\end{itemize}
+
+The $\sqrt{x}$ form is the unique power law $x^\alpha$ that
+simultaneously gives $\mu \to 1$ as $x \to \infty$ (automatic
+for any $\alpha > 0$) and $\mu \to \sqrt{x}$ as $x \to 0$
+(requires $\alpha = 1/2$; see Sec.~\ref{sec:asymptotics}).
+
+%=====================================================================
+\section{Derivation of the interpolating function}
+\label{sec:derivation}
+%=====================================================================
+
+The MOND interpolating function $\mu(x)$ relates the observed
+gravitational acceleration $g_{\mathrm{obs}}$ to the baryonic
+Newtonian prediction:
+\begin{equation}
+  g_{\mathrm{obs}} \;=\; \frac{g_{\mathrm{bar}}}{\mu(x)}\,.
+  \label{eq:mond-def}
+\end{equation}
+In the $\tauasym$ framework, the fractional deviation of gravity
+from Newton \emph{is} the Petz recovery failure: the inability to
+reconstruct the Newtonian gravitational state from the observed
+state quantifies precisely how much ``extra'' gravity is present.
+We therefore identify
+\begin{equation}
+  \mu(x) \;=\; \tauasym_{\mathrm{bound}}
+  \;=\; 1 - e^{-\Sigma_{\mathrm{gal}}/2}\,.
+  \label{eq:mu-tau}
+\end{equation}
+
+Substituting the galactic identification~\eqref{eq:sigma-gal}:
+\begin{equation}
+  \boxed{\;\mu(x) \;=\; 1 - e^{-\sqrt{x}}\;\;}
+  \label{eq:mu-petz}
+\end{equation}
+
+This is the main result. The MOND interpolating function arises as
+the \emph{saturated Petz recovery bound}---the boundary case where
+the gravitational channel is maximally efficient at converting
+entropy production into retrodiction failure. Note that:
+\begin{enumerate}
+  \item No Boltzmann weights or thermal partition functions appear;
+    this is a purely information-theoretic derivation.
+  \item The only inputs are the JRSWW bound~\eqref{eq:jrsww} from
+    quantum information theory and the
+    identification~\eqref{eq:sigma-gal} of the galactic entropy
+    production.
+  \item The Crooks fluctuation theorem is \emph{not} invoked. The
+    derivation lives entirely within the Petz recovery framework.
+\end{enumerate}
+
+%=====================================================================
+\section{Asymptotic verification}
+\label{sec:asymptotics}
+%=====================================================================
+
+\textbf{Newtonian limit} ($x \to \infty$).---As
+$x \to \infty$, $e^{-\sqrt{x}} \to 0$, hence
+\begin{equation}
+  \mu(x) \;\to\; 1\,,
+  \label{eq:newton-limit}
+\end{equation}
+recovering $g_{\mathrm{obs}} = g_{\mathrm{bar}}$: standard
+Newtonian gravity. \checkmark
+
+\textbf{Deep-MOND limit} ($x \to 0$).---Expanding to leading
+order,
+\begin{equation}
+  \mu(x) = 1 - e^{-\sqrt{x}}
+  = \sqrt{x} - \frac{x}{2} + \frac{x^{3/2}}{6} - \cdots
+  \;\approx\; \sqrt{x}\,.
+  \label{eq:mond-limit}
+\end{equation}
+Substituting into Eq.~\eqref{eq:mond-def}:
+\begin{equation}
+  g_{\mathrm{obs}} \;=\;
+  \frac{g_{\mathrm{bar}}}{\sqrt{g_{\mathrm{bar}}/a_0}}
+  \;=\; \sqrt{g_{\mathrm{bar}}\,a_0}\,.
+  \label{eq:deep-mond}
+\end{equation}
+For a circular orbit, $g_{\mathrm{obs}} = V^2/r$ and
+$g_{\mathrm{bar}} = GM/r^2$, giving
+\begin{equation}
+  V^4 \;=\; G M\,a_0\,,
+  \label{eq:btfr}
+\end{equation}
+the Baryonic Tully--Fisher Relation (BTFR) with zero intrinsic
+scatter. \checkmark
+
+\textbf{Transition region} ($x \sim 1$).---At
+$x = 1$: $\mu(1) = 1 - e^{-1} \approx 0.632$. The transition
+from deep-MOND to Newtonian occurs smoothly over approximately one
+decade in $x$, centered near $x \sim 1$.
+
+%=====================================================================
+\section{Comparison with other interpolating functions}
+\label{sec:comparison}
+%=====================================================================
+
+Table~\ref{tab:comparison} compares the Petz-derived interpolating
+function with the standard choices in the MOND literature.
+
+\begin{table}[t]
+\centering
+\caption{Comparison of MOND interpolating functions.
+$x = g_{\mathrm{bar}}/a_0$.}
+\label{tab:comparison}
+\begin{ruledtabular}
+\begin{tabular}{lccc}
+\textrm{Name} & $\mu(x)$ & $\mu(1)$ &
+  \textrm{$x\to 0$} \\
+\colrule
+Petz (this work) &
+  $1 - e^{-\sqrt{x}}$ & $0.632$ & $\sqrt{x}$ \\
+Simple~\cite{Famaey2005} &
+  $\dfrac{x}{1+x}$ & $0.500$ & $x$ \\
+Standard~\cite{Milgrom1983} &
+  $\dfrac{x}{\sqrt{1+x^2}}$ & $0.707$ & $x$ \\
+McGaugh RAR~\cite{McGaugh2016} &
+  $1 - e^{-\sqrt{x}}$ & $0.632$ & $\sqrt{x}$ \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+Several observations:
+\begin{enumerate}
+  \item The Petz function~\eqref{eq:mu-petz} is
+    \emph{identical in functional form} to the empirical fit
+    obtained by McGaugh, Lelli, and Schombert~\cite{McGaugh2016}
+    from the SPARC Radial Acceleration Relation (RAR) data.
+    This is a nontrivial consistency check: the
+    information-theoretic derivation independently produces the
+    same function that best fits 2693 data points from 153
+    galaxies.
+
+  \item The ``simple'' and ``standard'' interpolating functions
+    have $\mu \sim x$ as $x \to 0$, which gives
+    $g_{\mathrm{obs}} \sim g_{\mathrm{bar}}/x
+    = a_0$---a constant acceleration floor. By contrast, the
+    Petz function has $\mu \sim \sqrt{x}$, giving the physically
+    correct $g_{\mathrm{obs}} = \sqrt{g_{\mathrm{bar}} a_0}$.
+
+  \item The transition sharpness differs: the Petz/McGaugh
+    function transitions more gradually than the ``standard''
+    function ($\mu(1) = 0.632$ vs.\ $0.707$) but more sharply
+    than the ``simple'' function ($0.632$ vs.\ $0.500$).
+
+  \item Since the Petz function matches the McGaugh RAR fit
+    exactly, no additional fitting is needed against SPARC data.
+    The agreement with observations is inherited directly.
+\end{enumerate}
+
+%=====================================================================
+\section{What remains conjectural}
+\label{sec:conjecture}
+%=====================================================================
+
+The derivation rests on one non-trivial identification:
+\begin{equation}
+  \Sigma_{\mathrm{gal}} = 2\sqrt{x}\,.
+  \tag{\ref{eq:sigma-gal}}
+\end{equation}
+This is \assumed, not \derived. We offer three supporting arguments:
+
+\textbf{(i) Dimensional consistency.}
+$\Sigma$ must be dimensionless. The combination
+$g_{\mathrm{bar}}/a_0$ is dimensionless, and its square root is
+the simplest function thereof. The prefactor~2 is fixed by matching
+the JRSWW bound normalization~\eqref{eq:jrsww}.
+
+\textbf{(ii) Asymptotic uniqueness.}
+Consider the general ansatz $\Sigma_{\mathrm{gal}} = 2\,x^\alpha$.
+Then $\mu = 1 - e^{-x^\alpha}$. The deep-MOND limit
+$\mu \approx x^\alpha$ must equal $\sqrt{x}$ to reproduce the
+BTFR~\eqref{eq:btfr}, forcing $\alpha = 1/2$. No other power law
+works.
+
+\textbf{(iii) Connection to the cosmological sector.}
+If $\mu_0 = H_0/c$ (as suggested by Paper~3's cosmological
+analysis) and $a_0 = cH_0/(2\pi)$ (Milgrom's coincidence), then
+\begin{equation}
+  \Sigma_{\mathrm{gal}} = 2\sqrt{\frac{g_{\mathrm{bar}}}
+  {c^2\mu_0/(2\pi)}}\,,
+  \label{eq:sigma-cosmo}
+\end{equation}
+linking the galactic entropy production to the same parameter
+$\mu_0$ that governs the cosmological sector. This suggests a
+unified microscopic origin, though the derivation of
+$\Sigma_{\mathrm{gal}} = 2\sqrt{x}$ from first principles remains
+an open problem.
+
+\bigskip
+
+A microscopic derivation would require computing the quantum
+relative entropy $D(\rho_{\mathrm{obs}}\|\rho_{\mathrm{Newton}})$
+for the gravitational field in the weak-field, quasi-static limit.
+We leave this to future work.
+
+%=====================================================================
+\section{Summary}
+\label{sec:summary}
+%=====================================================================
+
+The derivation chain is:
+\begin{equation}
+  \underbrace{F \geq e^{-\Sigma/2}}_{\text{JRSWW bound}}
+  \;\xrightarrow{\;\Sigma_{\mathrm{gal}} = 2\sqrt{x}\;}\;
+  \underbrace{\mu(x) = 1 - e^{-\sqrt{x}}}_{\text{MOND interpolation}}
+  \label{eq:chain}
+\end{equation}
+The Petz recovery bound, combined with a single identification of
+the galactic entropy production, yields the MOND interpolating
+function that coincides with the best empirical fit to the Radial
+Acceleration Relation. The derivation uses no Boltzmann weights, no
+Crooks theorem, and no partition functions---only the
+information-theoretic structure of quantum channels.
+
+\begin{acknowledgments}
+This work builds on the $\tauasym$ framework established in
+Paper~1~\cite{Huang2025paper1}.
+\end{acknowledgments}
+
+\begin{thebibliography}{9}
+
+\bibitem{Huang2025paper1}
+S.-K.~Huang,
+``Temporal asymmetry as Petz recovery failure: a unifying
+framework from the Crooks relation to gravitational redshift,''
+(2025); \href{https://doi.org/10.5281/zenodo.14887770}
+{Zenodo: 10.5281/zenodo.14887770}.
+
+\bibitem{JRSWW2018}
+M.~Junge, R.~Renner, D.~Sutter, M.~M.~Wilde, and A.~Winter,
+``Universal recovery maps and approximate sufficiency of quantum
+relative entropy,''
+Ann.\ Henri Poincar\'{e} \textbf{19}, 2955 (2018).
+
+\bibitem{Crooks1999}
+G.~E.~Crooks,
+``Entropy production fluctuation theorem and the
+nonequilibrium work relation for free energy differences,''
+Phys.\ Rev.\ E \textbf{60}, 2721 (1999).
+
+\bibitem{McGaugh2016}
+S.~S.~McGaugh, F.~Lelli, and J.~M.~Schombert,
+``Radial Acceleration Relation in Rotationally Supported
+Galaxies,''
+Phys.\ Rev.\ Lett.\ \textbf{117}, 201101 (2016).
+
+\bibitem{Famaey2005}
+B.~Famaey and J.~Binney,
+``Modified Newtonian dynamics in the Milky Way,''
+Mon.\ Not.\ R.\ Astron.\ Soc.\ \textbf{363}, 603 (2005).
+
+\bibitem{Milgrom1983}
+M.~Milgrom,
+``A modification of the Newtonian dynamics as a possible
+alternative to the hidden mass hypothesis,''
+Astrophys.\ J.\ \textbf{270}, 365 (1983).
+
+\end{thebibliography}
+
+\end{document}

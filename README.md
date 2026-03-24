@@ -1,4 +1,4 @@
-# Weak-field Khronon Dark Matter: From Rotation Curves to the CMB
+# Dark Matter Phenomenology from Khronon Condensation Without Dark Matter Particles
 
 **Sheng-Kai Huang**  
 Independent Researcher | akai@fawstudio.com
@@ -22,7 +22,7 @@ kinetic structure produces μ(x) via Crooks). The transition scale a₀ = cH₀/
 
 1. [Paper 1: τ = 1−F Equivalence Chain](https://github.com/akaiHuang/petz-recovery-unification)
 2. [Paper 2: Gravitational Refractive Index](https://github.com/akaiHuang/exponential-metric)
-3. **Paper 3: Khronon Dark Matter** (this repo)
+3. **Paper 3: Khronon Condensation** (this repo)
 
 ## Files
 
@@ -36,14 +36,14 @@ kinetic structure produces μ(x) via Crooks). The transition scale a₀ = cH₀/
 ```bibtex
 @article{Huang2026_khronon,
   author = {Huang, Sheng-Kai},
-  title = {Weak-field Khronon Dark Matter: From Rotation Curves to the CMB},
+  title = {Dark Matter Phenomenology from Khronon Condensation Without Dark Matter Particles},
   year = {2026}
 }
 ```
 
 ## Abstract
 
-The temporal asymmetry parameter tau = 1 - F, introduced in Paper 1 as the Petz recovery failure, acquires physical realization through the Blanchet-Skordis (BS) Khronon action S = int sqrt(-g) [R - 2J(Y) + 2K(Q)] d^4x. This action contains two structurally independent sectors: the cosmological sector K(Q) = mu^2(Q-1)^2, fixed by ghost condensation with a single parameter mu_0 = H_0/c from dimensional analysis, which reproduces the cosmological dark matter density Omega_DM = delta_0(2+delta_0)/3 = 0.265 with CDM-like perturbations (c_s^2 = 0); and the galactic sector J(Y), a phenomenological free function constrained only at its asymptotic limits, which reproduces the Baryonic Tully-Fisher Relation and the Radial Acceleration Relation with one empirical parameter a_0 ~ 1.2e-10 m/s^2. We prove a no-go theorem establishing that pure scalar Khronon dark matter is incompatible with CMB observations, necessitating the Blanchet-Skordis tensor field. The resulting Khronon-Tensor theory predicts a CMB power spectrum identical to LCDM -- consistent with Planck data -- while producing MOND dynamics at galaxy scales. We present a systematic confrontation of this two-sector framework with 11 low-redshift observational tests (10 passed, 1 marginal), show that the Bullet Cluster mass-gas offset is naturally explained by the c_s^2 = 0 collisionless Khronon condensate, compare its parameter economy with LCDM and AeST, and identify falsifiable predictions. We are explicit about what is derived, what is assumed, and what remains open -- in particular, the connection between a_0 and mu_0 is suggestive but unproven, and the running mu(k) = k is a well-motivated assumption, not a derivation.
+The temporal asymmetry parameter tau = 1 - F, introduced in Paper 1 as the Petz recovery failure, acquires physical realization through the Blanchet-Skordis (BS) Khronon action S = int sqrt(-g) [R - 2J(Y) + 2K(Q)] d^4x. This action contains two structurally independent sectors: the cosmological sector K(Q) = mu^2(Q-1)^2, fixed by ghost condensation with a single parameter mu_0 = H_0/c from dimensional analysis, which reproduces the observed dark matter abundance Omega_DM = delta_0(2+delta_0)/3 = 0.265 with CDM-like perturbations (c_s^2 = 0) **without invoking any dark matter particle**; and the galactic sector J(Y), a phenomenological free function constrained only at its asymptotic limits, which reproduces the Baryonic Tully-Fisher Relation and the Radial Acceleration Relation with one empirical parameter a_0 ~ 1.2e-10 m/s^2. We prove a no-go theorem establishing that pure scalar Khronon is incompatible with CMB observations, necessitating the Blanchet-Skordis tensor field. The resulting Khronon-Tensor theory predicts a CMB power spectrum identical to LCDM -- consistent with Planck data -- while producing MOND dynamics at galaxy scales. If this framework is correct, direct dark matter detection experiments should yield null results. We present a systematic confrontation with 11 low-redshift observational tests (10 passed, 1 marginal), show that the Bullet Cluster mass-gas offset is naturally explained by the c_s^2 = 0 collisionless Khronon condensate, and identify falsifiable predictions.
 
 ## License
 
