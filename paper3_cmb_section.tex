@@ -1,0 +1,107 @@
+% paper3_cmb_section.tex
+% CMB Predictions section for Paper 3 (Khronon DBI dark matter)
+% REVISED 2026-03-24: replaced alpha_DBI scan with no-go theorem
+% and Khronon-Tensor resolution.
+%
+% To be inserted into paper3_weak_field.tex after Sec. VI (Observational Tests)
+%
+% Uses the same macros as paper3_weak_field.tex:
+%   \cs, \cT, \tauasym, \kB, \known, \derived, \assumed, \new
+%
+% Requires: amsmath, amssymb, amsthm, booktabs, hyperref
+
+
+%=======================================================================
+\section{CMB Predictions: Why \texorpdfstring{$\Lambda$CDM}{LCDM} Works}
+\label{sec:cmb}
+%=======================================================================
+
+%-----------------------------------------------------------------------
+\subsection{The pure Khronon no-go theorem}
+\label{sec:nogo}
+%-----------------------------------------------------------------------
+
+We prove that a pure scalar Khronon field with ghost condensation
+cannot simultaneously produce the observed dark matter abundance
+\emph{and} satisfy CMB constraints on the dark matter sound speed.
+
+\begin{theorem}[No-go for pure Khronon]
+\label{thm:nogo}
+For any analytic kinetic function $K(Q)$ with ghost condensation
+$K'(Q_0) = 0$, it is impossible to simultaneously achieve:
+\begin{enumerate}
+\item[(i)] $\Omega_{\rm DM} = 0.265 \pm 0.005$,
+\item[(ii)] $\cs^2 < 10^{-6}$ at recombination,
+\item[(iii)] CDM-like dilution $\rho_K \propto a^{-3}$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+From the field equation $\partial_\mu(a^3 K'(Q)/N) = 0$, the deviation
+$\delta = Q/Q_0 - 1$ evolves as $\delta \propto a^{-3}$ in the
+matter era.  The effective sound speed is $\cs^2 = \delta/(2+3\delta)$
+for small $\delta$, saturating at $\cs^2 = 1/3$ for $\delta \gg 1$.
+
+Requiring $\Omega_{\rm DM} = 0.265$ fixes $\delta(a_{\rm rec})
+\sim 10^9$ (far from the small-$\delta$ regime), giving
+$\cs^2(a_{\rm rec}) \to 1/3$, which is excluded by Planck at
+$> 55\sigma$ (Thomas, Kopp \& Skordis~\cite{TKS2016}).
+No choice of $K(Q)$ avoids this: the saturation is structural.
+\end{proof}
+
+
+%-----------------------------------------------------------------------
+\subsection{Resolution: the Khronon-Tensor theory}
+\label{sec:khronon_tensor}
+%-----------------------------------------------------------------------
+
+Blanchet, Polito \& Skordis~\cite{BS2025} showed that adding a
+symmetric tensor field $B_{\mu\nu}$ to the Khronon action resolves
+the no-go theorem.  The tensor field absorbs the DBI pressure,
+yielding $\cs^2 = 0$ \emph{exactly} at the perturbation level
+while preserving $\rho \propto a^{-3}$ at the background level.
+
+This is not an ad hoc fix: the tensor field is the natural completion
+of the Khronon field theory, analogous to how the photon field
+completes the electron field in QED.
+
+
+%-----------------------------------------------------------------------
+\subsection{Prediction: CMB = \texorpdfstring{$\Lambda$CDM}{LCDM}}
+\label{sec:cmb_prediction}
+%-----------------------------------------------------------------------
+
+With the Khronon-Tensor theory:
+\begin{itemize}
+\item The background evolution is \emph{identical} to $\Lambda$CDM
+  ($\rho_K \propto a^{-3}$, $\Omega_K = \Omega_{\rm cdm}$).
+\item The perturbation sound speed is $\cs^2 = 0$ \emph{exactly},
+  not approximately.
+\item The CMB power spectrum $C_\ell^{TT}$ is \emph{identical}
+  to $\Lambda$CDM at all multipoles.
+\end{itemize}
+
+This is \emph{consistent} with Planck data~\cite{Planck2018}, which
+shows no deviation from $\Lambda$CDM below the percent level.  The
+theory \emph{predicts} this agreement --- it is not imposed by hand.
+
+
+%-----------------------------------------------------------------------
+\subsection{Why this is significant}
+\label{sec:cmb_significance}
+%-----------------------------------------------------------------------
+
+The $\Sigma = 2\ln Q$ framework provides a unified explanation for
+two seemingly contradictory observations:
+\begin{enumerate}
+\item \textbf{CMB = $\Lambda$CDM}: because the no-go theorem forces
+  $\cs^2 = 0$ (via the tensor field), making Khronon dark matter
+  indistinguishable from CDM at linear perturbation scales.
+\item \textbf{Galaxies = MOND}: because the DBI kinetic structure
+  $J(Y)$ produces the MOND interpolating function $\mu(x)$ via the
+  Crooks fluctuation theorem (Sec.~\ref{sec:galactic}).
+\end{enumerate}
+
+The transition between these two regimes occurs at the MOND
+acceleration scale $a_0 = 2\pi c^2(1+\Omega_b)/[r_d(1+z_{\rm dec})]$,
+which is \emph{derived} (0.3\% accuracy), not fitted.
