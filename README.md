@@ -8,7 +8,7 @@ Independent Researcher | akai@fawstudio.com
 - **No-go theorem**: pure scalar Khronon cannot fit CMB + Ω_DM simultaneously
 - **Resolution**: Khronon-Tensor (BS2025) gives c_s² = 0 exactly → **CMB = ΛCDM**
 - **a₀ = 2πc²(1+Ωb)/[r_d(1+z_dec)]** = 1.197×10⁻¹⁰ m/s² (**0.3% match** to MOND)
-- **μ(x) = x/(1−e^{−√x})** derived from Crooks fluctuation theorem
+- **μ(x) = x/(1−e^{−√x})** inspired by Crooks fluctuation theorem (ansatz, not derivation)
 - **Ω_DM = 0.268** from retrodictability extremal principle (1.1% match)
 - **Bullet Cluster**: c_s² = 0 → pressureless dust → consistent
 
@@ -16,8 +16,7 @@ Independent Researcher | akai@fawstudio.com
 
 The Σ = 2 ln Q framework explains why ΛCDM succeeds at cosmological scales
 (the no-go theorem forces c_s² = 0) while galaxies follow MOND (the DBI
-kinetic structure produces μ(x) via Crooks). The transition scale a₀ is
-**derived** to 0.3% accuracy from recombination physics.
+kinetic structure produces μ(x) via Crooks). The transition scale a₀ = cH₀/(2π) gives 13% agreement -- a suggestive numerical coincidence.
 
 ## Papers in the Σ = 2 ln Q Series
 
@@ -42,6 +41,10 @@ kinetic structure produces μ(x) via Crooks). The transition scale a₀ is
 }
 ```
 
+## Abstract
+
+The temporal asymmetry parameter tau = 1 - F, introduced in Paper 1 as the Petz recovery failure, acquires physical realization through the Blanchet-Skordis (BS) Khronon action S = int sqrt(-g) [R - 2J(Y) + 2K(Q)] d^4x. This action contains two structurally independent sectors: the cosmological sector K(Q) = mu^2(Q-1)^2, fixed by ghost condensation with a single parameter mu_0 = H_0/c from dimensional analysis, which reproduces the cosmological dark matter density Omega_DM = delta_0(2+delta_0)/3 = 0.265 with CDM-like perturbations (c_s^2 = 0); and the galactic sector J(Y), a phenomenological free function constrained only at its asymptotic limits, which reproduces the Baryonic Tully-Fisher Relation and the Radial Acceleration Relation with one empirical parameter a_0 ~ 1.2e-10 m/s^2. We prove a no-go theorem establishing that pure scalar Khronon dark matter is incompatible with CMB observations, necessitating the Blanchet-Skordis tensor field. The resulting Khronon-Tensor theory predicts a CMB power spectrum identical to LCDM -- consistent with Planck data -- while producing MOND dynamics at galaxy scales. We present a systematic confrontation of this two-sector framework with 11 low-redshift observational tests (10 passed, 1 marginal), show that the Bullet Cluster mass-gas offset is naturally explained by the c_s^2 = 0 collisionless Khronon condensate, compare its parameter economy with LCDM and AeST, and identify falsifiable predictions. We are explicit about what is derived, what is assumed, and what remains open -- in particular, the connection between a_0 and mu_0 is suggestive but unproven, and the running mu(k) = k is a well-motivated assumption, not a derivation.
+
 ## License
 
-MIT License — Sheng-Kai Huang, 2026
+CC-BY-4.0 -- Sheng-Kai Huang, 2026

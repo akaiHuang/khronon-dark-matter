@@ -669,16 +669,21 @@ and observed scatter 0.13~dex over 2693~data points in
 \subsection{The Crooks interpolation function}
 \label{sec:crooks}
 
-\new\  The $\tauasym$ framework motivates a specific MOND
-interpolating function via the Crooks fluctuation
+\new\  The $\tauasym$ framework \emph{suggests} a specific MOND
+interpolating function \emph{inspired by} the Crooks fluctuation
 theorem~\cite{Crooks1999}.  For a process with entropy production
 $\Sigma$, the Crooks relation $P(\Sigma)/P(-\Sigma) = e^\Sigma$
-yields the interpolating function
+motivates the ansatz
 \begin{equation}
 \mu(x) = 1 - e^{-\sqrt{x}},
 \label{eq:crooks_mu}
 \end{equation}
 where $x = g_{\mathrm{bar}}/a_0$.
+The precise mapping from Crooks statistics to the MOND interpolation
+requires identifying $\Sigma$ with $\sqrt{g_{\mathrm{bar}}/a_0}$,
+which remains a conjecture; the functional form is proposed as an
+ansatz whose deep-MOND and Newtonian limits are correct by
+construction.
 Note that this $\mu(x)$ is the RAR interpolating function
 (as in Eq.~\eqref{eq:RAR}), not the AQUAL $\mu$-function of
 Eq.~\eqref{eq:MOND_Poisson}; the two are related by
@@ -687,10 +692,10 @@ Equation~\eqref{eq:crooks_mu} satisfies $\mu(x) \to 1$ for
 $x \to \infty$ and $\mu(x) \to \sqrt{x}$ for $x \to 0$
 (giving $V_f^4 = GM_{\mathrm{bar}}\,a_0$ in deep-MOND).
 
-If validated against the SPARC 175-galaxy sample, this would
-eliminate the free function $J(Y)$ entirely, making the
-theory's galactic predictions parameter-free (given $a_0$).
-This is the single most impactful testable prediction of
+If the Crooks ansatz is validated against the SPARC 175-galaxy
+sample, this would eliminate the free function $J(Y)$ entirely,
+making the theory's galactic predictions parameter-free (given
+$a_0$).  This is the single most impactful testable prediction of
 the $\tauasym$ framework for galactic phenomenology.
 
 \subsection{$a_0$ and $\mu_0$: suggestive coincidence}
@@ -872,13 +877,19 @@ beyond the isothermal approximation.
   a derivation.  This is necessary for CMB compatibility;
 \item[\textsc{A3.}] $J(Y)$ functional form: free function,
   only asymptotic behavior determined.  The Crooks
-  interpolation~\eqref{eq:crooks_mu} is a specific proposal;
+  interpolation~\eqref{eq:crooks_mu} is an ansatz inspired by
+  thermodynamic fluctuation relations; a rigorous derivation
+  from Crooks theorem remains open;
 \item[\textsc{A4.}] $a_0$--$\mu_0$ connection ($a_0 = cH_0/(2\pi)$
   to 13\%): suggestive but unproven;
 \item[\textsc{A5.}] $c_{13} = 0$: action choice (not
   geometric necessity);
 \item[\textsc{A6.}] $\Omega_{\mathrm{DM}}h^2 = 0.12$: initial
-  condition, not predicted.
+  condition, not predicted;
+\item[\textsc{A7.}] Decoupling: the galactic sector $J(Y)$ and
+  cosmological sector $K(Q)$ have no cross-coupling terms in the
+  action.  This is a simplification; cross-terms may be needed
+  for a complete theory.
 \end{enumerate}
 
 \subsection{Falsifiable predictions}
@@ -954,6 +965,18 @@ Requiring $\Omega_{\rm DM} = 0.265$ fixes $\delta(a_{\rm rec})
 $\cs^2(a_{\rm rec}) \to 1/3$, which is excluded by Planck at
 $> 55\sigma$ (Thomas, Kopp \& Skordis~\cite{TKS2016}).
 No choice of $K(Q)$ avoids this: the saturation is structural.
+
+\emph{Completeness.}---The value $\delta(a_{\mathrm{rec}})$ is a
+non-negative real number, so exactly three regimes are possible:
+$\delta \ll 1$, $\delta \gg 1$, or $\delta \sim O(1)$.  In the
+first case the $a^{-3}$ dilution requirement forces
+$\delta(a_{\mathrm{rec}})$ too small for the observed
+$\Omega_{\mathrm{DM}}$; in the second and third cases
+$\cs^2 \geq O(0.1)$, violating condition~(ii).  No fine-tuned
+$\mu(a)$ can avoid this trichotomy: regardless of the path
+$\mu(a)$ takes, $\delta(a_{\mathrm{rec}})$ must fall in one of
+these three regimes, and each violates at least one condition.
+See Supplemental Material for the complete proof.
 \end{proof}
 
 %-----------------------------------------------------------------------
@@ -961,7 +984,7 @@ No choice of $K(Q)$ avoids this: the saturation is structural.
 \label{sec:khronon_tensor}
 %-----------------------------------------------------------------------
 
-Blanchet, Polito \& Skordis~\cite{BS2025} showed that adding a
+Blanchet \& Skordis~\cite{BS2025} showed that adding a
 symmetric tensor field $B_{\mu\nu}$ to the Khronon action resolves
 the no-go theorem.  The tensor field absorbs the DBI pressure,
 yielding $\cs^2 = 0$ \emph{exactly} at the perturbation level
@@ -1337,7 +1360,7 @@ arXiv:2404.06584.
 
 \bibitem{BS2025}
 L.~Blanchet and C.~Skordis,
-``Khronon-Tensor theory,''
+``Khronon-Tensor theory reproducing MOND and the cosmological model,''
 (2025); arXiv:2507.00912.
 
 \bibitem{Jacobson2010}
