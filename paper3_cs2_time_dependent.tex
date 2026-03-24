@@ -345,47 +345,79 @@ simultaneously:
 
 \begin{proof}
 By the conservation law, $\delta(a)$ is determined by
-$\mu(a)$ through Eq.~\eqref{eq:I0}.  We consider two
-regimes.
+$\mu(a)$ through Eq.~\eqref{eq:I0}.  We consider three
+regimes for $\delta(a_{\mathrm{rec}})$.
 
 \emph{Case 1: $\delta(a_{\mathrm{rec}}) \ll 1$.}---Then
 $\cs^2(a_{\mathrm{rec}}) \simeq \delta(a_{\mathrm{rec}})/2$,
 so condition~(2) requires
 $\delta(a_{\mathrm{rec}}) < 2 \times 10^{-6}$.
-From the conservation law:
-$\mu^2(a_{\mathrm{rec}})\,\delta(a_{\mathrm{rec}})
-= I_0/(2\,a_{\mathrm{rec}}^3)$.
-Condition~(1) requires
-$\mu^2(a_0)\,\delta(a_0)\,(2{+}\delta_0)
-= 8\pi G\,\rho_{\mathrm{crit}}\,\Omega_{\mathrm{DM}}/c^2$,
-giving $I_0 = 2\mu^2_0\,\delta_0$.
+We now show that condition~(3) is violated for
+\emph{any} $\mu(a)$ achieving this bound, by an exact,
+model-independent calculation.
 
-The ratio:
+From the conservation law
+$\mu^2\delta = I_0/(2a^3)$,
+the energy density (Eq.~\eqref{eq:rhoK} of the main text)
+takes the form
 \begin{equation}
-\frac{\delta(a_{\mathrm{rec}})}{\delta_0}
-= \frac{\mu_0^2}{\mu_{\mathrm{rec}}^2}\,
-\frac{1}{a_{\mathrm{rec}}^3}
-= \frac{\mu_0^2}{\mu_{\mathrm{rec}}^2}\,(1{+}z_{\mathrm{rec}})^3.
-\label{eq:ratio}
+\rho_K(a) = \frac{c^2 I_0}{16\pi G}\,
+\frac{2+\delta(a)}{a^3}.
+\label{eq:rhoK_I0}
 \end{equation}
-For $\delta(a_{\mathrm{rec}}) < 2\times10^{-6}$ and
-$\delta_0 = 0.34$:
+For exact CDM scaling ($\rho \propto a^{-3}$), the
+factor $(2{+}\delta)$ must be constant.
+Normalizing to $a_0 = 1$, the fractional deviation from
+$a^{-3}$ at any epoch~$a$ is
 \begin{equation}
-\frac{\mu_{\mathrm{rec}}^2}{\mu_0^2}
-> \frac{0.34}{2\times10^{-6}} \times (1101)^3
-\simeq 2.3\times 10^{14}.
-\label{eq:mu_ratio}
+\Delta(a) \;\equiv\;
+\frac{\rho_K(a)}{\rho_K(a_0)\,(a_0/a)^3} - 1
+\;=\; \frac{2+\delta(a)}{2+\delta_0} - 1.
+\label{eq:Delta_def}
 \end{equation}
-Now check condition~(3).  The energy density is
-$\rho_K \propto \mu^2\delta(2{+}\delta)/a^0
-\propto I_0(2{+}\delta)/(2a^3)$.
-For $\delta \ll 1$: $\rho_K \propto I_0/a^3$
-(exact CDM scaling).  But at intermediate redshifts
-where $\delta$ transitions from $O(1)$ to $\ll 1$,
-the factor $(2{+}\delta)$ varies, giving
-$O(\delta_0/2) \simeq 17\%$ deviation from $a^{-3}$
-between $z = 0$ and the transition redshift.
-This violates condition~(3).
+This expression is exact and depends on $\mu(a)$
+only through $\delta(a)$.
+
+Now evaluate at $a = a_{\mathrm{rec}}$.
+Since $0 \leq \delta(a_{\mathrm{rec}}) < 2\times10^{-6}$:
+\begin{equation}
+\Delta(a_{\mathrm{rec}})
+= \frac{2 + \delta(a_{\mathrm{rec}})}{2 + \delta_0} - 1
+\;\in\;\left[\frac{2}{2{+}\delta_0} - 1,\;\;
+\frac{2{+}2\times10^{-6}}{2{+}\delta_0} - 1\right].
+\label{eq:Delta_bound}
+\end{equation}
+With $\delta_0 = 0.34$ (fixed by condition~(1)):
+\begin{equation}
+\Delta(a_{\mathrm{rec}})
+= \frac{2}{2.34} - 1 + O(10^{-6})
+= -\frac{\delta_0}{2+\delta_0} + O(10^{-6})
+= -0.1453.
+\label{eq:Delta_exact}
+\end{equation}
+That is, the energy density at recombination is
+$14.5\%$ \emph{below} the $a^{-3}$ extrapolation from
+today---regardless of how $\mu(a)$ varies.  This
+exceeds the $1\%$ tolerance of condition~(3) by more
+than an order of magnitude.
+
+\emph{Model-independence.}---The bound~\eqref{eq:Delta_exact}
+uses only two ingredients:
+(a)~the identity $\rho_K \propto (2{+}\delta)/a^3$, which
+follows from the conservation law and is independent of
+$\mu(a)$; and
+(b)~the boundary values $\delta_0 = 0.34$ (condition~1)
+and $\delta_{\mathrm{rec}} < 2\times10^{-6}$
+(condition~2 in this regime).
+No assumption about the functional form of $\mu(a)$ or
+the intermediate trajectory $\delta(a)$ is needed.
+The deviation
+$|\Delta| = \delta_0/(2{+}\delta_0)$ coincides
+with the equation of state $w_0 = \delta_0/(2{+}\delta_0)
+= 0.145$, which is the irreducible cost of matching
+$\Omega_{\mathrm{DM}}$ with a non-constant $(2{+}\delta)$
+factor.
+This completes Case~1.
 
 \emph{Case 2: $\delta(a_{\mathrm{rec}}) \gg 1$.}---By
 Theorem~\ref{thm:saturation}, $\cs^2 = O(1)$, violating

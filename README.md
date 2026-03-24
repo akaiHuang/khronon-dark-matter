@@ -7,7 +7,7 @@ Independent Researcher | akai@fawstudio.com
 
 - **No-go theorem**: pure scalar Khronon cannot fit CMB + Ω_DM simultaneously
 - **Resolution**: Khronon-Tensor (BS2025) gives c_s² = 0 exactly → **CMB = ΛCDM**
-- **a₀ = 2πc²(1+Ωb)/[r_d(1+z_dec)]** = 1.197×10⁻¹⁰ m/s² (**0.3% match** to MOND)
+- **a₀ = cH₀/(2π)** = 1.04×10⁻¹⁰ m/s² (13% of observed; suggestive but unproven)
 - **μ(x) = x/(1−e^{−√x})** inspired by Crooks fluctuation theorem (ansatz, not derivation)
 - **Ω_DM = 0.268** from retrodictability extremal principle (1.1% match)
 - **Bullet Cluster**: c_s² = 0 → pressureless dust → consistent

@@ -1033,27 +1033,34 @@ $K'(Q_0) = 0$, it is impossible to simultaneously achieve:
 \end{theorem}
 
 \begin{proof}[Proof sketch]
-From the field equation $\partial_\mu(a^3 K'(Q)/N) = 0$, the deviation
-$\delta = Q/Q_0 - 1$ evolves as $\delta \propto a^{-3}$ in the
-matter era.  The effective sound speed is $\cs^2 = \delta/(2+3\delta)$
-for small $\delta$, saturating at $\cs^2 = 1/3$ for $\delta \gg 1$.
+The value $\delta(a_{\mathrm{rec}})$ is a non-negative real number,
+so exactly three regimes are possible.
 
-Requiring $\Omega_{\rm DM} = 0.265$ fixes $\delta(a_{\rm rec})
-\sim 10^9$ (far from the small-$\delta$ regime), giving
-$\cs^2(a_{\rm rec}) \to 1/3$, which is excluded by Planck at
-$> 55\sigma$ (Thomas, Kopp \& Skordis~\cite{TKS2016}).
-No choice of $K(Q)$ avoids this: the saturation is structural.
+\emph{Case~1: $\delta(a_{\mathrm{rec}}) \ll 1$.}---Condition~(ii)
+requires $\delta(a_{\mathrm{rec}}) < 2\times10^{-6}$.
+Since $\mu^2\delta = I_0/(2a^3)$, the energy density
+$\rho_K = c^2 I_0(2{+}\delta)/(16\pi G\,a^3)$
+deviates from $a^{-3}$ by the exact fraction
+\begin{equation}
+\Delta(a) = \frac{2+\delta(a)}{2+\delta_0} - 1.
+\label{eq:Delta_sketch}
+\end{equation}
+At recombination, $\delta \approx 0$, so
+$|\Delta| = \delta_0/(2{+}\delta_0)$.
+With $\delta_0 = 0.34$ from condition~(i):
+$|\Delta| = 0.34/2.34 = 14.5\%$, violating condition~(iii).
+This bound is independent of $\mu(a)$.
 
-\emph{Completeness.}---The value $\delta(a_{\mathrm{rec}})$ is a
-non-negative real number, so exactly three regimes are possible:
-$\delta \ll 1$, $\delta \gg 1$, or $\delta \sim O(1)$.  In the
-first case the $a^{-3}$ dilution requirement forces
-$\delta(a_{\mathrm{rec}})$ too small for the observed
-$\Omega_{\mathrm{DM}}$; in the second and third cases
-$\cs^2 \geq O(0.1)$, violating condition~(ii).  No fine-tuned
-$\mu(a)$ can avoid this trichotomy: regardless of the path
-$\mu(a)$ takes, $\delta(a_{\mathrm{rec}})$ must fall in one of
-these three regimes, and each violates at least one condition.
+\emph{Cases~2 and~3: $\delta(a_{\mathrm{rec}}) \gtrsim O(1)$.}---The
+sound speed $\cs^2 = \delta/(2{+}3\delta)$
+gives $\cs^2 \geq 0.1$ for $\delta \gtrsim 0.25$, violating
+condition~(ii) by $\geq 5$ orders of magnitude.  For
+$\delta \gg 1$, the saturation $\cs^2 \to 1/3$ is structural
+(see Supplemental Material, Theorem~2).
+No choice of $K(Q)$ avoids this: all analytic $K$ with
+$K''(1) > 0$ give $\cs^2 = O(1)$ when $\delta = O(1)$.
+
+No fine-tuned $\mu(a)$ can avoid this trichotomy.
 See Supplemental Material for the complete proof.
 \end{proof}
 
@@ -1108,8 +1115,8 @@ two seemingly contradictory observations:
 \end{enumerate}
 
 The transition between these two regimes occurs at the MOND
-acceleration scale $a_0 = 2\pi c^2(1+\Omega_b)/[r_d(1+z_{\rm dec})]$,
-which is \emph{derived} (0.3\% accuracy), not fitted.
+acceleration scale $a_0 \approx cH_0/(2\pi) = 1.04 \times 10^{-10}\;\mathrm{m/s}^2$,
+within 13\% of the empirical value (Sec.~\ref{sec:a0_mu}).
 
 
 %=======================================================================
@@ -1325,8 +1332,8 @@ The theory has two independent sectors:
 The $\Sigma = 2\ln Q$ framework naturally explains why $\Lambda$CDM
 succeeds at cosmological scales (the no-go theorem forces $\cs^2 = 0$)
 while galaxies follow MOND (the DBI kinetic structure produces
-$\mu(x)$ via Crooks).  The transition scale $a_0$ is derived to
-0.3\% accuracy from recombination physics.
+$\mu(x)$ via Crooks).  The transition scale $a_0 \approx cH_0/(2\pi)$
+is suggestive but unproven (Sec.~\ref{sec:a0_mu}).
 
 The theory is structurally stable (no ghosts, no gradient
 instabilities, no tachyons), satisfies $\cT = c$ exactly,
@@ -1618,9 +1625,9 @@ arXiv:1311.7144.
 
 \bibitem{stability_SM}
 S.-K.~Huang,
-``Stability analysis of the Khronon theory with
-$K(Q) = \mu^2(Q-1)^2$: 8-criterion assessment,''
-Supplemental Material (2026).
+``Supplementary material: Stability analysis of the Khronon
+condensate,''
+companion file \texttt{paper3\_stability.tex} (2026).
 
 \bibitem{FosterJacobson2006}
 B.~Z.~Foster and T.~Jacobson,

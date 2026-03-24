@@ -17,8 +17,10 @@
 \usepackage{xcolor}
 
 \newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem*{proposition}{Proposition}
+\newtheorem*{remark}{Remark}
 
 % Convenience macros
 \newcommand{\kB}{k_{\mathrm{B}}}
@@ -302,6 +304,241 @@ Several observations:
     exactly, no additional fitting is needed against SPARC data.
     The agreement with observations is inherited directly.
 \end{enumerate}
+
+%=====================================================================
+\section{Uniqueness of the Petz interpolating function}
+\label{sec:uniqueness}
+%=====================================================================
+
+We now prove that the interpolating function
+$\mu(x) = 1 - e^{-\sqrt{x}}$ is singled out by a combination of
+asymptotic, regularity, and minimality conditions.  The results are
+organized in three stages of increasing strength.
+
+%---------------------------------------------------------------------
+\subsection{Power-law uniqueness}
+\label{sec:powerlaw}
+%---------------------------------------------------------------------
+
+\begin{theorem}[Power-law uniqueness]
+\label{thm:powerlaw}
+Let $f\colon [0,\infty) \to [0,\infty)$ be a smooth function with
+$f(0) = 0$, and define $\mu(x) = 1 - e^{-f(x)/2}$.
+Suppose:
+\begin{itemize}
+  \item[\textup{(i)}] $\mu(x) \to \sqrt{x}$ as $x \to 0^{+}$
+    \textup{(deep-MOND / BTFR)};
+  \item[\textup{(ii)}] $\mu(x) \to 1$ as $x \to \infty$
+    \textup{(Newtonian limit)};
+  \item[\textup{(iii)}] $f(x) = c\,x^{\alpha}$ for constants $c > 0$,
+    $\alpha > 0$ \textup{(power-law form)}.
+\end{itemize}
+Then $\alpha = 1/2$ and $c = 2$.  That is,
+$f(x) = 2\sqrt{x}$ and $\mu(x) = 1 - e^{-\sqrt{x}}$ are the
+\emph{unique} power-law solutions.
+\end{theorem}
+
+\begin{proof}
+\textbf{Step 1 (deep-MOND constraint).}
+For small $x > 0$, condition~(iii) gives
+$f(x)/2 = (c/2)\,x^{\alpha} \to 0$.  The Taylor expansion
+$1 - e^{-u} = u - u^2/2 + \cdots$ yields
+\begin{equation}
+  \mu(x) \;=\; \frac{c}{2}\,x^{\alpha}
+    - \frac{c^2}{8}\,x^{2\alpha} + O(x^{3\alpha})\,.
+  \label{eq:mu-expand}
+\end{equation}
+Condition~(i) requires $\mu(x)/\sqrt{x} \to 1$ as $x \to 0^{+}$.
+Comparing leading powers: $x^{\alpha} \sim x^{1/2}$, so
+\begin{equation}
+  \alpha = \frac{1}{2}\,.
+  \label{eq:alpha-half}
+\end{equation}
+Matching the coefficient: $(c/2)\,x^{1/2} \to \sqrt{x}$ requires
+$c/2 = 1$, hence
+\begin{equation}
+  c = 2\,.
+  \label{eq:c-two}
+\end{equation}
+
+\textbf{Step 2 (Newtonian limit check).}
+With $f(x) = 2\sqrt{x}$: as $x \to \infty$,
+$e^{-\sqrt{x}} \to 0$, so $\mu(x) \to 1$.
+Condition~(ii) is satisfied.~$\checkmark$
+
+\textbf{Step 3 (uniqueness).}
+Within the power-law family $f(x) = c\,x^{\alpha}$, the two
+constraints~(i) and~(ii) fix both parameters uniquely.
+No other member of this family satisfies both conditions.
+\end{proof}
+
+\begin{remark}
+If one relaxes to $f(x) = c\,x^{\alpha} + d\,x^{\beta}$ with
+$0 < \alpha < \beta$, condition~(i) still forces $\alpha = 1/2$ and
+$c = 2$ (the subleading term $d\,x^{\beta}$ is irrelevant as
+$x \to 0^{+}$).
+Thus the deep-MOND constraint pins the leading monomial uniquely;
+subleading corrections are unconstrained by asymptotics alone.
+\end{remark}
+
+%---------------------------------------------------------------------
+\subsection{Strict concavity of the Petz interpolating function}
+\label{sec:concavity}
+%---------------------------------------------------------------------
+
+The monotonicity and concavity of $\mu(x)$ are physically meaningful:
+monotonicity says that stronger baryonic acceleration produces
+dynamics closer to Newton; concavity says that the marginal return of
+increasing $g_{\mathrm{bar}}$ diminishes---a kind of
+``information-theoretic saturation.''
+
+\begin{theorem}[Strict concavity]
+\label{thm:concavity}
+The function $\mu(x) = 1 - e^{-\sqrt{x}}$ satisfies:
+\begin{itemize}
+  \item[\textup{(a)}] $\mu'(x) > 0$ for all $x > 0$
+    \textup{(strictly increasing)};
+  \item[\textup{(b)}] $\mu''(x) < 0$ for all $x > 0$
+    \textup{(strictly concave)}.
+\end{itemize}
+\end{theorem}
+
+\begin{proof}
+We write $\mu(x) = 1 - e^{-x^{1/2}}$ and compute all derivatives
+explicitly.
+
+\textbf{First derivative.}
+Let $u(x) = x^{1/2}$, so $u'(x) = \tfrac{1}{2}\,x^{-1/2}$.
+By the chain rule,
+\begin{equation}
+  \mu'(x) \;=\; e^{-u}\,u'
+  \;=\; \frac{e^{-\sqrt{x}}}{2\sqrt{x}}\,.
+  \label{eq:mu-prime}
+\end{equation}
+Since $e^{-\sqrt{x}} > 0$ and $\sqrt{x} > 0$ for all $x > 0$,
+we have $\mu'(x) > 0$.~$\checkmark$
+
+\textbf{Second derivative.}
+We differentiate $\mu'(x) = \tfrac{1}{2}\,x^{-1/2}\,e^{-x^{1/2}}$
+using the product rule.  Write
+\begin{equation}
+  \mu'(x) = p(x)\,q(x)\,,\quad
+  p(x) = \tfrac{1}{2}\,x^{-1/2},\quad
+  q(x) = e^{-x^{1/2}}\,.
+\end{equation}
+Their individual derivatives are
+\begin{align}
+  p'(x) &= -\frac{1}{4}\,x^{-3/2}\,,
+  \label{eq:p-prime}\\[4pt]
+  q'(x) &= e^{-x^{1/2}} \cdot \bigl(-\tfrac{1}{2}\,x^{-1/2}\bigr)
+         = -\frac{e^{-\sqrt{x}}}{2\sqrt{x}}\,.
+  \label{eq:q-prime}
+\end{align}
+By the product rule, $\mu'' = p'\,q + p\,q'$:
+\begin{align}
+  \mu''(x) &= \left(-\frac{1}{4x^{3/2}}\right) e^{-\sqrt{x}}
+    + \frac{1}{2\sqrt{x}} \cdot
+      \left(-\frac{e^{-\sqrt{x}}}{2\sqrt{x}}\right)
+    \nonumber\\[4pt]
+  &= -\frac{e^{-\sqrt{x}}}{4\,x^{3/2}}
+     -\frac{e^{-\sqrt{x}}}{4\,x}\,.
+  \label{eq:mu-double-prime-expand}
+\end{align}
+Factoring out $-e^{-\sqrt{x}}/4$:
+\begin{equation}
+  \boxed{\;\mu''(x) \;=\;
+    -\frac{e^{-\sqrt{x}}}{4}
+    \left(\frac{1}{x^{3/2}} + \frac{1}{x}\right)\;\;}
+  \label{eq:mu-double-prime}
+\end{equation}
+For $x > 0$: $e^{-\sqrt{x}} > 0$, $x^{-3/2} > 0$, $x^{-1} > 0$,
+so the factor in parentheses is strictly positive, and the overall
+sign is negative.  Therefore $\mu''(x) < 0$ for all $x > 0$.
+\end{proof}
+
+\begin{remark}
+The two terms in~\eqref{eq:mu-double-prime} have distinct origins.
+The $x^{-3/2}$ term comes from the curvature of the square-root
+mapping $x \mapsto \sqrt{x}$ (i.e.\ from $p'$), while the $x^{-1}$
+term comes from the exponential saturation of the Petz bound (i.e.\
+from $q'$).
+Both contribute with the same sign, so concavity is \emph{robust}:
+it does not rely on a cancellation.
+\end{remark}
+
+%---------------------------------------------------------------------
+\subsection{Characterization theorem}
+\label{sec:characterization}
+%---------------------------------------------------------------------
+
+The following theorem combines the results above into a single
+characterization.
+
+\begin{theorem}[Characterization]
+\label{thm:characterization}
+Let $f\colon [0,\infty) \to [0,\infty)$ be smooth and monotonically
+increasing with $f(0) = 0$, and define
+$\mu_{f}(x) = 1 - e^{-f(x)/2}$.  Suppose:
+\begin{itemize}
+  \item[\textup{(i)}] $\mu_{f}(x)/\sqrt{x} \to 1$ as $x \to 0^{+}$
+    \textup{(BTFR)};
+  \item[\textup{(ii)}] $\mu_{f}(x) \to 1$ as $x \to \infty$
+    \textup{(Newtonian limit)}.
+\end{itemize}
+Then:
+\begin{enumerate}
+  \item \textbf{Asymptotic form.}
+    $f(x) = 2\sqrt{x} + h(x)$, where $h(x)/\sqrt{x} \to 0$
+    as $x \to 0^{+}$.
+  \item \textbf{Monomial uniqueness.}
+    If $f$ is a monomial ($f(x) = c\,x^{\alpha}$), then
+    $f(x) = 2\sqrt{x}$.
+  \item \textbf{Concavity of the minimal solution.}
+    The minimal (zero-parameter) choice $h = 0$, giving
+    $\mu(x) = 1 - e^{-\sqrt{x}}$, is strictly concave on
+    $(0,\infty)$.
+  \item \textbf{Zero-parameter uniqueness.}
+    Among all functions of the form
+    $\mu_{f}(x) = 1 - e^{-f(x)/2}$ satisfying \textup{(i)}
+    and~\textup{(ii)}, the choice $f(x) = 2\sqrt{x}$ is the unique
+    member with no free parameters beyond those fixed by
+    \textup{(i)} and~\textup{(ii)}.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\textbf{Part 1.}
+Condition~(i) with $f(x) \to 0$ gives
+$\mu_{f}(x) \approx f(x)/2 + O(f^2)$.  Hence $f(x)/2 \to \sqrt{x}$
+as $x \to 0^{+}$, i.e.\ $f(x) = 2\sqrt{x} + h(x)$ with
+$h(x)/\sqrt{x} \to 0$.
+
+\textbf{Part 2.}
+If $f(x) = c\,x^{\alpha}$, Part~1 forces the leading behavior
+$c\,x^{\alpha} \sim 2\,x^{1/2}$, so $\alpha = 1/2$ and $c = 2$.
+This is Theorem~\ref{thm:powerlaw}.
+
+\textbf{Part 3.}
+This is Theorem~\ref{thm:concavity}.
+
+\textbf{Part 4.}
+Any $f$ satisfying Part~1 takes the form $f(x) = 2\sqrt{x} + h(x)$
+with $h(x)/\sqrt{x} \to 0$.  The correction~$h$ is a free function
+(subject to regularity).  Setting $h = 0$ is the unique choice that
+introduces no additional functional freedom.  Every other choice
+requires specifying the form of~$h$ (e.g.\ $h(x) = d\,x^{\beta}$
+with $\beta > 1/2$), which introduces at least one free parameter.
+\end{proof}
+
+\begin{corollary}
+\label{cor:occam}
+If one imposes Occam's razor---the interpolating function
+$\mu(x) = 1 - e^{-f(x)/2}$ should involve no free parameters beyond
+those fixed by the BTFR and Newtonian asymptotics---then
+$\mu(x) = 1 - e^{-\sqrt{x}}$ is the unique solution.  This
+zero-parameter function is automatically strictly monotone and
+strictly concave.
+\end{corollary}
 
 %=====================================================================
 \section{What remains conjectural}
