@@ -7,16 +7,21 @@ Independent Researcher | akai@fawstudio.com
 
 - **No-go theorem**: pure scalar Khronon cannot fit CMB + Ω_DM simultaneously
 - **Resolution**: Khronon-Tensor (BS2025) gives c_s² = 0 exactly → **CMB = ΛCDM**
-- **a₀ = cH₀/(2π)** = 1.04×10⁻¹⁰ m/s² (13% of observed; suggestive but unproven)
-- **μ(x) = x/(1−e^{−√x})** inspired by Crooks fluctuation theorem (ansatz, not derivation)
-- **Ω_DM = 0.268** from retrodictability extremal principle (1.1% match)
-- **Bullet Cluster**: c_s² = 0 → pressureless dust → consistent
+- **a₀ = cH₀/(2π)** = 1.04×10⁻¹⁰ m/s² (13% below empirical 1.2×10⁻¹⁰; suggestive but not a derivation of the empirical value)
+- **μ(x) = 1 − e^{−√x}** ansatz inspired by the Petz recovery bound F ≥ e^{−Σ/2} (Paper 1); deep-MOND asymptotic is fixed by BTFR, the transition shape is the prediction
+- **Ω_DM = 0.265** from ghost condensation kinetic function K(Q) = μ²(Q−1)² with μ₀ = H₀/c (0.5% match to Planck 2018 Ω_DM = 0.2665, given fitted δ₀ = 0.34)
+- **Bullet Cluster**: c_s² = 0 → pressureless Khronon dust → mass–gas offset reproduced without DM particle
 
 ## The Core Argument
 
 The Σ = 2 ln Q framework explains why ΛCDM succeeds at cosmological scales
-(the no-go theorem forces c_s² = 0) while galaxies follow MOND (the DBI
-kinetic structure produces μ(x) via Crooks). The transition scale a₀ = cH₀/(2π) gives 13% agreement -- a suggestive numerical coincidence.
+(the no-go theorem forces c_s² = 0, which the Khronon-Tensor field then
+realizes exactly) while galaxies follow MOND (the J(Y) sector reproduces
+BTFR/RAR with one empirical parameter a₀). The cosmological sector is fixed
+by ghost condensation with the single scale μ₀ = H₀/c chosen by dimensional
+analysis; this then yields Ω_DM = δ₀(2+δ₀)/3 = 0.265 (matching Planck to
+0.5% given fitted δ₀ = 0.34) and a₀ = cH₀/(2π) = 1.04×10⁻¹⁰ m/s² (13% below
+the empirical value — suggestive, not a derivation of the empirical a₀).
 
 ## Papers in the Σ = 2 ln Q Series
 
@@ -30,6 +35,11 @@ kinetic structure produces μ(x) via Crooks). The transition scale a₀ = cH₀/
 - `paper3_alpha_derivation.tex` — α_DBI derivation and naturalness
 - `paper3_cs2_time_dependent.tex` — No-go theorem proof
 - `paper3_cmb_section.tex` — Standalone CMB section
+- `paper3_petz_interpolation.tex` — μ(x) from Petz recovery bound
+- `paper3_stability.tex` — Linear-perturbation stability of K(Q)
+- `paper3_mu0_dimensional.tex` — μ₀ = H₀/c uniqueness (dimensional analysis)
+- `paper3_running_coupling.tex` — μ(a) = H(a)/c is the unique scaling preserving δ = const in matter era
+- `paper3_bullet_cluster.tex` — Quantitative c_s² = 0 → Bullet Cluster offset
 
 ## Citation
 

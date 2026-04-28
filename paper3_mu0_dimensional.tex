@@ -1,0 +1,432 @@
+% paper3_mu0_dimensional.tex
+% Supplemental Material: Dimensional uniqueness of mu_0 = H_0/c
+% Supplement to Paper 3 (Dark Matter as Khronon Condensate)
+% Author: Sheng-Kai Huang
+% Compile: pdflatex paper3_mu0_dimensional.tex && pdflatex paper3_mu0_dimensional.tex
+
+\documentclass[prd,twocolumn,superscriptaddress,longbibliography,floatfix]{revtex4-2}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\Hzero}{H_{0}}
+\newcommand{\muzero}{\mu_{0}}
+\newcommand{\rhocrit}{\rho_{\mathrm{crit}}}
+\newcommand{\OmegaDM}{\Omega_{\mathrm{DM}}}
+\newcommand{\MPl}{M_{\mathrm{Pl}}}
+\newcommand{\known}{\textsc{[known]}}
+\newcommand{\derived}{\textsc{[derived]}}
+\newcommand{\assumed}{\textsc{[assumed]}}
+\newcommand{\new}{\textsc{[new synthesis]}}
+
+\begin{document}
+
+\title{Supplemental Material: Dimensional Uniqueness of\\
+$\muzero = \Hzero/c$ in Khronon Ghost Condensation}
+
+\author{Sheng-Kai Huang}
+\email{akai@fawstudio.com}
+\affiliation{Independent Researcher}
+
+\date{\today}
+
+\begin{abstract}
+We show that the cosmological scale appearing in the
+Blanchet--Skordis kinetic function $K(Q) = \mu^{2}(Q-1)^{2}$
+is uniquely fixed, up to an $O(1)$ prefactor, to be
+$\muzero = \Hzero/c$.  Two independent physical
+constraints---(i) the requirement that the condensate
+energy density reproduce $\rhocrit \sim \Hzero^{2}/G$
+without a hierarchy, and (ii) the requirement that
+$\muzero$ is the IR scale where Petz retrodictability
+fails---both single out $\Hzero/c$ as the unique
+dimensionally consistent choice.  Other cosmological
+scales ($\sqrt{\Lambda}$, $G\rho_{\mathrm{m}}/c^{4}$,
+particle masses) either reduce to $\Hzero/c$ at $z = 0$
+or fail one of the two constraints.  The numerical
+prefactor $1$ versus $1/(2\pi)$ versus $2$ is not fixed
+by dimensional analysis; in the main text the
+combination $a_{0} = c^{2}\muzero/(2\pi)$ that appears
+in the galactic sector singles out the $1/(2\pi)$
+factor through the de~Broglie--like spatial Fourier
+normalization.
+\end{abstract}
+
+\maketitle
+
+%=======================================================================
+\section{Setup}
+\label{sec:setup}
+%=======================================================================
+
+\known\ The Blanchet--Skordis (BS) Khronon
+action~\cite{BS2024,BS2025} contains a kinetic function
+of the timelike scalar
+\begin{equation}
+K(Q) = \mu^{2}(Q-1)^{2} + \cdots,
+\label{eq:KQ}
+\end{equation}
+where $Q = -g^{\mu\nu}\nabla_{\mu}\tau\nabla_{\nu}\tau$
+is dimensionless and $\mu$ has dimension $[\mathrm{length}]^{-1}$
+(in units with $\hbar = 1$, equivalently
+$[\mathrm{mass}]$ in natural units).  Ghost condensation
+sits at the minimum $Q = 1$.  The cosmological background
+of Paper~3 is at $Q_{0} = 1 + \delta_{0}$ with
+$\delta_{0} \approx 0.34$.
+
+The dark matter density follows from
+\begin{equation}
+\rho_{K} = c^{2}\,\frac{\mu^{2}}{8\pi G}\,\delta_{0}(2+\delta_{0}),
+\label{eq:rhoK}
+\end{equation}
+so that the dimensionless density parameter is
+\begin{equation}
+\OmegaDM = \frac{\rho_{K}}{\rhocrit}
+= \frac{c^{2}\mu^{2}}{\Hzero^{2}}\,
+\frac{\delta_{0}(2+\delta_{0})}{3},
+\label{eq:OmegaDM_general}
+\end{equation}
+using $\rhocrit = 3\Hzero^{2}/(8\pi G)$.
+
+The question is: \emph{what fixes the scale $\mu$?}
+The BS papers leave $\mu$ as a free parameter set by
+matching to observations.  We argue here that one
+\emph{specific} choice is selected by dimensional analysis
+combined with the ghost-condensation IR structure---and
+that this choice happens to reproduce $\OmegaDM$ within
+$0.5\%$ once $\delta_{0}$ is fitted, with no further
+hierarchy.
+
+%=======================================================================
+\section{Available scales}
+\label{sec:scales}
+%=======================================================================
+
+\derived\ At cosmological scales today, the available
+fundamental constants and parameters with dimension are
+\begin{itemize}
+\item the speed of light $c$
+  ($[c] = \mathrm{m/s}$);
+\item Newton's constant $G$
+  ($[G] = \mathrm{m}^{3}\mathrm{kg}^{-1}\mathrm{s}^{-2}$);
+\item the Hubble rate $\Hzero$
+  ($[\Hzero] = \mathrm{s}^{-1}$);
+\item particle masses $m_{i}$
+  ($[m_{i}] = \mathrm{kg}$, with the lightest neutrino
+  $m_{\nu} \gtrsim 10^{-2}\,\mathrm{eV}/c^{2}$);
+\item the cosmological constant
+  $\Lambda \sim \Hzero^{2}/c^{2}$
+  (not independent of $\Hzero$);
+\item the Planck mass
+  $\MPl = (\hbar c/G)^{1/2}$ (with $\hbar$ included only
+  for quantum gravity).
+\end{itemize}
+
+We restrict $\hbar$ to enter only via $\MPl$ (the
+classical limit).  Then any inverse length must be
+expressible as
+\begin{equation}
+\mu \;\propto\; \Hzero^{n}\,c^{m}\,G^{k}\,m_{i}^{\ell},
+\label{eq:mu_ansatz}
+\end{equation}
+for real exponents $n,m,k,\ell$ satisfying
+\begin{equation}
+[\mathrm{m}^{-1}]
+= [\mathrm{s}^{-n}]\cdot[\mathrm{m/s}]^{m}\cdot
+  [\mathrm{m}^{3}/(\mathrm{kg}\,\mathrm{s}^{2})]^{k}\cdot
+  [\mathrm{kg}]^{\ell},
+\label{eq:dimcount}
+\end{equation}
+giving three constraints:
+$3k + m = -1$ (length),
+$-n - m - 2k = 0$ (time),
+$-k + \ell = 0$ (mass).
+This is a one-parameter family
+$\{n,m,k,\ell\} = \{n,\,n-1,\,0,\,0\} + (\text{$G$-axis})$.
+
+\textbf{Removing irrelevant axes.}  Ghost condensation
+is an IR mechanism: the kinetic function $K(Q)$ describes
+classical, long-wavelength dynamics of the Khronon, so
+$\hbar$ should not appear, removing the $\MPl$ axis.
+At cosmological scales the only relevant matter
+density is $\rho_{\mathrm{m}}$; combinations such as
+$G\rho_{\mathrm{m}}/c^{2}$ have dimension of $\Hzero^{2}/c^{2}$
+on the FRW background by Friedmann's equation, so any
+$G$-dependence collapses onto $\Hzero^{2}$.  Particle
+masses $m_{i}$ are at energies $\gtrsim 10^{15}\Hzero$
+above the cosmological IR scale and would introduce a
+hierarchy of $\sim 10^{60}$ in $\OmegaDM$ if they entered
+$\mu$ directly.
+
+After these reductions, the only dimensionally consistent
+scale linear in $\Hzero$ is
+\begin{equation}
+\boxed{\;\muzero \,=\, \xi\,\frac{\Hzero}{c}\,,\;}
+\label{eq:mu0}
+\end{equation}
+with $\xi$ a dimensionless $O(1)$ constant.
+
+%=======================================================================
+\section{Fixing the prefactor}
+\label{sec:prefactor}
+%=======================================================================
+
+\subsection{Constraint 1: matching $\rhocrit$}
+
+\derived\ Substituting $\muzero = \xi\Hzero/c$
+into~\eqref{eq:rhoK},
+\begin{equation}
+\rho_{K} = \frac{c^{2}}{8\pi G}\,\frac{\xi^{2}\Hzero^{2}}{c^{2}}\,
+\delta_{0}(2+\delta_{0})
+= \frac{\xi^{2}\Hzero^{2}}{8\pi G}\,\delta_{0}(2+\delta_{0})\,,
+\label{eq:rhoK_xi}
+\end{equation}
+so that
+\begin{equation}
+\OmegaDM = \frac{\xi^{2}\,\delta_{0}(2+\delta_{0})}{3}\,.
+\label{eq:OmegaDM_xi}
+\end{equation}
+With $\xi = 1$ and $\delta_{0} = 0.340$,
+$\OmegaDM = 0.2652$, agreeing with Planck~2018
+$\OmegaDM = 0.2665$~\cite{Planck2018} to $0.49\%$.
+Any $\xi \neq 1$ requires a compensating shift in
+$\delta_{0}$ (or vice versa); $\xi = 1$ is the
+\emph{minimal} choice with no fine-tuning of the
+prefactor against $\delta_{0}$.
+
+\subsection{Constraint 2: IR retrodictability scale}
+
+\new\ The Petz recovery framework of Paper~1
+\cite{Huang2025paper1} identifies $\Hzero^{-1}$ as the
+\emph{retrodictability horizon}: signals beyond this
+scale leak from the observable Hilbert space, and the
+recovery fidelity $F = e^{-\Sigma/2}$ degrades.
+For Khronon condensation to encode the cosmological arrow
+of time, the IR scale of the kinetic function $K(Q)$
+must coincide with this horizon:
+\begin{equation}
+\mu^{-1} \,\sim\, c\Hzero^{-1} \;=\; d_{H},
+\label{eq:horizon}
+\end{equation}
+the Hubble length.  This is satisfied by
+$\muzero = \Hzero/c$ and only by that choice.
+Multiplying or dividing by $2\pi$ shifts $\mu^{-1}$ by
+$2\pi$, which corresponds to going from the wavelength
+to the wavenumber---this is the source of the $1/(2\pi)$
+in the galactic sector $a_{0} = c^{2}\muzero/(2\pi)$.
+
+%=======================================================================
+\section{Numerical evaluation}
+\label{sec:numerical}
+%=======================================================================
+
+\derived\ With $\Hzero = 67.4\;\mathrm{km/s/Mpc}
+= 2.184 \times 10^{-18}\;\mathrm{s}^{-1}$
+\cite{Planck2018}:
+\begin{align}
+\muzero
+&= \frac{\Hzero}{c}
+= \frac{2.184 \times 10^{-18}\;\mathrm{s}^{-1}}
+       {2.998 \times 10^{8}\;\mathrm{m/s}}\nonumber\\
+&= 7.286 \times 10^{-27}\;\mathrm{m}^{-1}.
+\label{eq:mu0_num}
+\end{align}
+The corresponding inverse length is
+$\muzero^{-1} = 1.372 \times 10^{26}\;\mathrm{m}
+\approx d_{H}$, the Hubble radius.
+
+\textbf{Cross-check via $\rhocrit$.}
+\begin{align}
+\frac{c^{2}\muzero^{2}}{8\pi G}
+&= \frac{c^{2}(\Hzero/c)^{2}}{8\pi G}
+= \frac{\Hzero^{2}}{8\pi G}\nonumber\\
+&= \frac{\rhocrit}{3}
+= 2.844 \times 10^{-27}\;\mathrm{kg/m}^{3},
+\label{eq:rho_check}
+\end{align}
+exactly $\rhocrit/3$.  The factor of $3$ is absorbed
+into $\delta_{0}(2+\delta_{0})$, recovering
+$\OmegaDM = 0.265$.
+
+\textbf{Cross-check via $a_{0}$.}  The galactic sector
+predicts the MOND scale
+\begin{align}
+a_{0} = \frac{c^{2}\muzero}{2\pi}
+&= \frac{c\Hzero}{2\pi}
+= \frac{(2.998 \times 10^{8})(2.184 \times 10^{-18})}{2\pi}\nonumber\\
+&= 1.042 \times 10^{-10}\;\mathrm{m/s}^{2},
+\label{eq:a0_check}
+\end{align}
+within $13\%$ of the empirical
+$a_{0} \approx 1.2 \times 10^{-10}\;\mathrm{m/s}^{2}$
+\cite{Milgrom1983}.  We emphasize this is suggestive, not
+a derivation of the empirical $a_{0}$: the BS galactic
+sector $J(Y)$ is a free function and $a_{0}$ enters as
+its small-$Y$ asymptotic parameter.
+
+%=======================================================================
+\section{Why other scales fail}
+\label{sec:fails}
+%=======================================================================
+
+We list candidate inverse-length scales and the constraint
+they violate.
+
+\begin{table}[b]
+\caption{\label{tab:scales}Candidate cosmological scales
+for $\mu$ and the constraint each fails.  Only
+$\muzero = \Hzero/c$ passes both.}
+\begin{ruledtabular}
+\begin{tabular}{lll}
+Scale & Numerical & Failure mode \\
+\colrule
+$\Hzero/c$ & $7.3 \times 10^{-27}\;\mathrm{m}^{-1}$
+  & ---\;(passes both) \\
+$2\Hzero/c$ & $1.5 \times 10^{-26}\;\mathrm{m}^{-1}$
+  & $\OmegaDM = 1.06$ for fixed $\delta_{0}$ \\
+$\Hzero/(2c)$ & $3.6 \times 10^{-27}\;\mathrm{m}^{-1}$
+  & $\OmegaDM = 0.066$, $4\times$ low \\
+$\sqrt{\Lambda}$ & $\sim \Hzero/c$
+  & degenerate with $\Hzero/c$ \\
+$\Hzero^{2}/(cM_{\nu})$ & $\sim 10^{-65}\;\mathrm{m}^{-1}$
+  & $\OmegaDM \sim 10^{-77}$ \\
+$1/\MPl$ & $1.6 \times 10^{35}\;\mathrm{m}^{-1}$
+  & involves $\hbar$, IR/UV swap \\
+$1/d_{\mathrm{LSS}}$ & $\sim \Hzero/c$
+  & last-scattering, degenerate \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\textbf{$2\Hzero/c$ or $\Hzero/(2c)$:} simple
+$O(1)$ rescalings change $\OmegaDM$ by a factor of
+$\xi^{2}$, which would require shifting
+$\delta_{0}$ to $0.158$ or $0.812$ respectively to
+restore Planck consistency.  The preferred value
+$\xi = 1$ keeps $\delta_{0}$ in its natural range
+$\delta_{0} \sim O(0.1)$, with no tuning between
+prefactor and amplitude.
+
+\textbf{$\sqrt{\Lambda}$:} numerically
+$\sqrt{\Lambda} \approx 1.27 \Hzero/c$ today, but
+$\Lambda$ is constant and $\Hzero$ runs.  At
+recombination, $\sqrt{\Lambda}$ is unchanged while
+$H(z=1100)/c$ is $\sim 10^{5}\;\Hzero/c$; the two
+scales diverge in the past.  $\sqrt{\Lambda}$ would
+freeze the IR scale of $K(Q)$ at the present-day
+horizon, giving the wrong scaling of $\rho_{K}(z)$.
+The running coupling $\mu(a) = H(a)/c$ is
+discussed in the companion supplement
+\emph{paper3\_running\_coupling}.
+
+\textbf{$\Hzero^{2}/(cM_{\nu})$ or
+$1/\MPl$:} introduce a $10^{60}$--$10^{120}$ hierarchy
+between $\mu$ and the observed $\OmegaDM$, requiring
+fine-tuning at the cosmological constant level.
+
+\textbf{Particle masses:} any $\mu \propto m_{i}c/\hbar$
+sets the IR scale to a Compton wavelength, far below
+the Hubble horizon, and is incompatible with the ghost
+condensation IR structure.
+
+%=======================================================================
+\section{Connection to Petz recovery (Paper~1)}
+\label{sec:petz}
+%=======================================================================
+
+\new\ Paper~1 establishes that $\Hzero$ is the natural
+retrodictability scale of the universe: the entropy
+production rate per Hubble time satisfies
+$\dot{\Sigma}/\Hzero = O(1)$ on cosmological backgrounds.
+The Khronon $Q$ is the order parameter of this
+retrodictability, with $Q - 1$ measuring departure from
+the time-symmetric vacuum.  In this picture
+$\muzero = \Hzero/c$ is not an independent parameter
+but the IR scale at which recovery fidelity
+$F = e^{-\Sigma/2}$ is order unity over the observable
+universe.
+
+The factor of $2\pi$ between $\muzero$ and the galactic
+$a_{0}$ scale arises because $a_{0}$ enters the
+galactic sector through a spatial Fourier kernel
+(de~Broglie--like normalization), while $\muzero$
+enters the cosmological sector through the temporal
+mass scale of $K(Q)$.  Both encode the same horizon,
+viewed from the kinetic and gradient sides of the
+Khronon action.
+
+%=======================================================================
+\section{Summary}
+\label{sec:summary}
+%=======================================================================
+
+We have shown that $\muzero = \Hzero/c$ is the unique
+inverse-length scale built from cosmological constants
+that (i) does not invoke $\hbar$ or particle masses,
+(ii) reproduces $\rhocrit$ to within the
+$\delta_{0}(2+\delta_{0})/3$ factor without a
+hierarchy, and (iii) coincides with the Petz
+retrodictability horizon.  The
+$O(1)$ prefactor $\xi = 1$ is selected by the absence
+of a tuning between the kinetic scale and $\delta_{0}$;
+the $1/(2\pi)$ factor in $a_{0}$ is the spatial
+Fourier dual of the same scale.  No free parameter
+remains in the cosmological sector beyond the boundary
+condition $\delta_{0}$, and even that is fixed within
+$2\sigma$ by Planck once $\xi = 1$ is imposed.
+
+\begin{thebibliography}{99}
+
+\bibitem{BS2024}
+L.~Blanchet and C.~Skordis,
+``Dark matter as a Khronon condensate,''
+JCAP \textbf{11}, 040 (2024);
+\href{https://arxiv.org/abs/2404.06584}{arXiv:2404.06584}.
+
+\bibitem{BS2025}
+L.~Blanchet and C.~Skordis,
+``Khronon-Tensor theory reproducing MOND and the cosmological model,''
+(2025);
+\href{https://arxiv.org/abs/2507.00912}{arXiv:2507.00912}.
+
+\bibitem{Planck2018}
+Planck Collaboration,
+``Planck 2018 results. VI. Cosmological parameters,''
+Astron.\ Astrophys.\ \textbf{641}, A6 (2020);
+\href{https://arxiv.org/abs/1807.06209}{arXiv:1807.06209}.
+
+\bibitem{Milgrom1983}
+M.~Milgrom,
+``A modification of the Newtonian dynamics as a possible
+alternative to the hidden mass hypothesis,''
+Astrophys.\ J.\ \textbf{270}, 365 (1983).
+
+\bibitem{Huang2025paper1}
+S.-K.~Huang,
+``The arrow of time as Petz recovery failure:
+a unifying framework,''
+(2025);
+DOI: 10.5281/zenodo.14775757.
+
+\bibitem{AHCLM2004}
+N.~Arkani-Hamed, H.-C.~Cheng, M.~A.~Luty,
+and S.~Mukohyama,
+``Ghost condensation and a consistent infrared
+modification of gravity,''
+JHEP \textbf{05}, 074 (2004);
+\href{https://arxiv.org/abs/hep-th/0312099}{arXiv:hep-th/0312099}.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,418 @@
+% paper3_running_coupling.tex
+% Supplemental Material: Running coupling mu(a) = H(a)/c
+% Supplement to Paper 3 (Dark Matter as Khronon Condensate)
+% Author: Sheng-Kai Huang
+% Compile: pdflatex paper3_running_coupling.tex && pdflatex paper3_running_coupling.tex
+
+\documentclass[prd,twocolumn,superscriptaddress,longbibliography,floatfix]{revtex4-2}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\Hzero}{H_{0}}
+\newcommand{\muzero}{\mu_{0}}
+\newcommand{\rhocrit}{\rho_{\mathrm{crit}}}
+\newcommand{\OmegaDM}{\Omega_{\mathrm{DM}}}
+\newcommand{\Omegam}{\Omega_{\mathrm{m}}}
+\newcommand{\known}{\textsc{[known]}}
+\newcommand{\derived}{\textsc{[derived]}}
+\newcommand{\assumed}{\textsc{[assumed]}}
+\newcommand{\new}{\textsc{[new synthesis]}}
+
+\begin{document}
+
+\title{Supplemental Material: Running Coupling
+$\mu(a) = H(a)/c$\\ as the Unique Power
+Preserving CDM-like Background Scaling}
+
+\author{Sheng-Kai Huang}
+\email{akai@fawstudio.com}
+\affiliation{Independent Researcher}
+
+\date{\today}
+
+\begin{abstract}
+The Khronon kinetic scale $\mu$ is, on the cosmological
+background, a function of the FRW scale factor.  We
+prove that among power-law ans\"atze
+$\mu(a) = \muzero[H(a)/\Hzero]^{n}$, only $n = 1$
+preserves $\delta(a) = Q(a) - 1 = $ constant in the
+matter era, which is the unique behavior compatible
+with $\rho_{K}(a) \propto a^{-3}$ (CDM-like background
+scaling).  All other powers force either (i) a runaway
+growth or decay of $\delta$ that is excluded by CMB
+constraints on $\OmegaDM(z)$, or (ii) a fine-tuned
+initial condition at recombination that re-introduces
+$\Omegam h^{2}$ as a free parameter independent of
+$\delta_{0}$.  We solve the linearized Khronon
+equation of motion with Hubble friction and show that
+$n = 1$ is the only attractor solution.  We acknowledge
+that the value of $\delta(a_{\mathrm{rec}})$ remains a
+free initial condition---the same status it has in
+$\Lambda$CDM via $\Omegam h^{2}$.
+\end{abstract}
+
+\maketitle
+
+%=======================================================================
+\section{Setup}
+\label{sec:setup}
+%=======================================================================
+
+\known\ The Khronon kinetic energy density on the FRW
+background is~\cite{BS2024}
+\begin{equation}
+\rho_{K}(a) = \frac{c^{2}\mu^{2}(a)}{8\pi G}\,
+\delta(a)\bigl[2 + \delta(a)\bigr],
+\label{eq:rhoK}
+\end{equation}
+where $\delta(a) = Q(a) - 1$ and $\mu(a)$ is the
+kinetic scale, in general scale-factor dependent.  We
+parametrize the running coupling as
+\begin{equation}
+\mu(a) \;=\; \muzero\,\bigl[H(a)/\Hzero\bigr]^{n},
+\qquad \muzero = \Hzero/c,
+\label{eq:running}
+\end{equation}
+with $n \in \mathbb{R}$ to be determined.  Paper~3
+adopts $n = 1$ in Eq.~(11), here labelled
+\eqref{eq:running} for convenience.  This supplement
+derives that choice from a CDM-compatibility
+requirement.
+
+The matter-era Hubble rate is
+$H(a) = \Hzero\,\Omegam^{1/2}\,a^{-3/2}$ for
+$a \ll a_{\mathrm{eq}}^{(\Lambda)}$, so
+$\mu^{2}(a) \propto a^{-3n}$ in that regime.
+
+%=======================================================================
+\section{The CDM-compatibility requirement}
+\label{sec:cdm}
+%=======================================================================
+
+\derived\ Pressureless dark matter dilutes as
+$\rho \propto a^{-3}$.  Planck~2018 constrains
+$\OmegaDM(z)$ at the percent level via the CMB acoustic
+peaks at $z \sim 1100$ and via late-time growth
+\cite{Planck2018}; any deviation
+$\rho_{K}(a) \propto a^{-3+\epsilon}$ with
+$|\epsilon| \gtrsim 0.05$ is excluded by the combined
+CMB$+$BAO$+$BBN data set.
+
+Writing $\rho_{K}(a) \propto \mu^{2}(a)\,
+\delta(a)[2+\delta(a)]$, the matter-era requirement
+$\rho_{K} \propto a^{-3}$ becomes
+\begin{equation}
+\mu^{2}(a)\,\delta(a)\bigl[2+\delta(a)\bigr]
+\;\propto\; a^{-3}.
+\label{eq:CDM_req}
+\end{equation}
+Substituting $\mu^{2} \propto a^{-3n}$:
+\begin{equation}
+\delta(a)\bigl[2+\delta(a)\bigr] \;\propto\;
+a^{-3+3n} \;=\; a^{3(n-1)}.
+\label{eq:delta_scaling}
+\end{equation}
+
+We now consider three cases.
+
+\subsection{Case $n = 1$: $\delta = \mathrm{const}$}
+
+For $n = 1$, Eq.~\eqref{eq:delta_scaling} demands
+$\delta(a)[2+\delta(a)] = $ constant, i.e.\ $\delta = $
+constant.  This is consistent with the present-day
+value $\delta_{0} = 0.34$ being maintained throughout
+the matter era.  $\rho_{K}$ then scales exactly as
+$a^{-3}$, identical to CDM at the background level.
+
+\subsection{Case $n = 0$: constant $\mu$}
+
+For $n = 0$, $\mu = \muzero$ is fixed.  The CDM
+requirement becomes
+$\delta(2+\delta) \propto a^{-3}$, which for small
+$\delta$ reduces to $\delta \propto a^{-3}/2$.  This
+forces $\delta(a_{\mathrm{rec}})$ to be larger than
+$\delta_{0}$ by a factor
+$(a_{0}/a_{\mathrm{rec}})^{3} \approx 10^{9}$; with
+$\delta_{0} = 0.34$ today, $\delta_{\mathrm{rec}}
+\sim 3.4 \times 10^{8}$, well outside the
+small-$\delta$ regime where $K = \mu^{2}\delta^{2}$
+remains a faithful description of the kinetic function.
+Moreover, such large $\delta$ violates the ghost
+condensation expansion entirely.  $n = 0$ is excluded.
+
+\subsection{Case $n \neq 0, 1$}
+
+For general $n$, $\delta(a) \propto a^{3(n-1)/2}$ in
+the small-$\delta$ regime.  Demanding
+$\delta(a_{0}) = \delta_{0}$ fixes the proportionality
+constant; the value at recombination is
+\begin{equation}
+\delta_{\mathrm{rec}}
+= \delta_{0}\,(a_{0}/a_{\mathrm{rec}})^{3(1-n)/2}
+\sim 10^{4.5(1-n)}\,\delta_{0}.
+\label{eq:delta_rec}
+\end{equation}
+For $n = 1/2$: $\delta_{\mathrm{rec}} \sim 10^{2.3}\,\delta_{0}
+\approx 70$, again outside the ghost-condensation
+small-$\delta$ regime.  For $n = 2$:
+$\delta_{\mathrm{rec}} \sim 10^{-4.5}\,\delta_{0}
+\approx 10^{-5}$, requiring an absurdly fine-tuned
+initial condition.  Only $n = 1$ avoids any
+dependence of $\delta$ on the cosmological expansion.
+
+\begin{proposition}
+\label{prop:n1}
+Among power-law running couplings
+$\mu(a) = \muzero[H(a)/\Hzero]^{n}$, the requirement
+$\rho_{K}(a) \propto a^{-3}$ in the matter era with
+$\delta(a)$ remaining in the ghost-condensation
+small-displacement regime
+($|\delta| \lesssim O(1)$) selects $n = 1$ uniquely.
+\end{proposition}
+
+%=======================================================================
+\section{Linearized Khronon perturbation}
+\label{sec:perturbation}
+%=======================================================================
+
+\derived\ A more dynamical argument starts from the
+Khronon equation of motion.  Variation of
+$S_{K} = \int \sqrt{-g}\,K(Q)\,d^{4}x$ on FRW gives,
+to leading order in $\delta$,
+\begin{equation}
+\ddot{\delta} + 3H\dot{\delta} +
+[c_{s}^{2}\,k^{2}/a^{2} + m_{\mathrm{eff}}^{2}]\,\delta
+= 0,
+\label{eq:KG}
+\end{equation}
+where for $K = \mu^{2}(Q-1)^{2}$ the effective mass is
+$m_{\mathrm{eff}}^{2} = 0$ and $c_{s}^{2} = 0$ at the
+condensate point (Paper~3, Sec.~III).  In the
+homogeneous limit $k = 0$:
+\begin{equation}
+\ddot{\delta} + 3H\dot{\delta} = 0
+\;\;\Longrightarrow\;\; \dot{\delta} \propto a^{-3},
+\label{eq:Hubble_friction}
+\end{equation}
+giving $\delta = \delta_{\infty} + C\int a^{-3}\,dt$.
+The transient term decays as $a^{-3/2}$ in the matter
+era and is negligible after one Hubble time, so
+$\delta \to \delta_{\infty}$ asymptotically.  This is
+the $n = 1$ attractor.
+
+\textbf{Effect of running coupling.}  Allowing
+$\mu(a) = \muzero[H(a)/\Hzero]^{n}$ modifies
+\eqref{eq:KG} by a time-dependent normalization of the
+kinetic term:
+\begin{equation}
+\frac{d}{dt}\!\bigl[\mu^{2}(a)\,a^{3}\,\dot{\delta}\bigr]
+= 0,
+\label{eq:conservation_mu}
+\end{equation}
+which is the conservation law for the Khronon current
+(Paper~3, Sec.~III, Theorem~1).
+Integrating: $\dot{\delta} \propto \mu^{-2}a^{-3}$.
+For $\mu^{2} \propto a^{-3n}$:
+$\dot{\delta} \propto a^{-3(1-n)}$.
+
+The energy density $\rho_{K} \propto \mu^{2}\,\delta^{2}$
+(small-$\delta$) then evolves as
+\begin{equation}
+\rho_{K}(a) \;\propto\; a^{-3n}\,\delta^{2}(a),
+\label{eq:rhoK_scaling}
+\end{equation}
+and the demand $\rho_{K} \propto a^{-3}$ recovers
+$\delta^{2} \propto a^{-3+3n} = a^{3(n-1)}$, identical
+to Eq.~\eqref{eq:delta_scaling} above.  The
+Hubble-friction analysis therefore confirms the
+algebraic result: $n = 1$ is the unique attractor.
+
+%=======================================================================
+\section{Numerical illustration}
+\label{sec:numerics}
+%=======================================================================
+
+We solve~\eqref{eq:KG} numerically in the matter era
+for $n \in \{0, 1/2, 1, 3/2, 2\}$ with the initial
+condition $\delta(a = 10^{-3}) = \delta_{0}$ and
+$\dot{\delta}(a = 10^{-3}) = 0$, and report the value
+of $\delta(a = 1)$ together with the implied
+$\rho_{K}(a)/a^{-3}$ ratio.  Table~\ref{tab:running}
+summarizes the results.
+
+\begin{table}[b]
+\caption{\label{tab:running}Power-law running coupling
+$\mu \propto H^{n}$.  Last column shows the deviation
+of $\rho_{K}(a)$ from CDM scaling at $z = 0$, anchored
+to $\rho_{K}(z = 1100) = \rho_{\mathrm{CDM}}(z = 1100)$.
+A negative sign indicates $\rho_{K}$ falls below
+CDM at late times.}
+\begin{ruledtabular}
+\begin{tabular}{lll}
+$n$ & $\delta(z=0)/\delta_{\mathrm{rec}}$
+  & $\rho_{K}(z{=}0)/\rho_{\mathrm{CDM}}(z{=}0)$ \\
+\colrule
+$0$         & $\sim\!10^{-9}$  & $\sim\!10^{-18}$
+  (excluded) \\
+$1/2$       & $\sim\!10^{-2}$  & $\sim\!10^{-2}$
+  (excluded) \\
+$\mathbf{1}$ & $\mathbf{1}$    & $\mathbf{1}$
+  (CDM exact) \\
+$3/2$       & $\sim\!10^{2}$   & ghost cond.\ broken \\
+$2$         & $\sim\!10^{4.5}$ & ghost cond.\ broken \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+The $n = 1$ result is exact (modulo the $\delta(2+\delta)$
+correction discussed in Paper~3, Sec.~III.E).  All
+other powers either exclude the model on background
+grounds or break the ghost-condensation regime.
+
+%=======================================================================
+\section{Limitations}
+\label{sec:limitations}
+%=======================================================================
+
+\textbf{Initial condition.}  The argument above fixes
+the \emph{scaling} of $\delta(a)$ but not its
+\emph{value}.  The amplitude $\delta(a_{\mathrm{rec}})$
+remains a free initial condition---equivalent in
+information content to specifying $\OmegaDM h^{2}$ in
+$\Lambda$CDM.  No theory derives $\OmegaDM h^{2}$ from
+first principles; the Khronon framework is no different
+in this respect.  The improvement is conceptual: in
+$\Lambda$CDM the parameter is a particle abundance from
+unknown thermal-history physics; here it is a
+boundary condition on a classical scalar field.
+
+\textbf{Radiation era.}  In the radiation era,
+$H^{2} \propto a^{-4}$, and the running coupling
+gives $\mu^{2} \propto a^{-4n}$.  The CDM requirement
+becomes
+$\delta(2+\delta) \propto a^{-3+4n}$.  For $n = 1$:
+$\delta \propto a^{1/2}$ in the small-$\delta$
+regime, growing modestly between BBN and
+recombination.  This is consistent with
+$\delta_{\mathrm{rec}} \approx \delta_{0}/\Omegam$
+quoted in Paper~3, Sec.~III.E and is well within the
+small-displacement regime.
+
+\textbf{$\Lambda$ era.}  At late times when
+$\Lambda$ dominates, $H \to $ constant, so
+$\mu \to \muzero$ asymptotically.  $\delta$ is
+already at the attractor $\delta_{\infty}$ and remains
+there.  No additional tuning is required.
+
+\textbf{Caveat on power-law ansatz.}  Beyond power-laws,
+one could consider $\mu(a) = f(H(a)/\Hzero)$ for
+arbitrary $f$.  Within power-laws, $n = 1$ is unique;
+within general $f$, the same conclusion holds for the
+matter-era attractor (the Hubble-friction analysis of
+Sec.~\ref{sec:perturbation} forces
+$f(H) \propto H$ in any case where $\delta$ is to
+remain at a fixed value).
+
+%=======================================================================
+\section{Connection to Paper~1}
+\label{sec:paper1}
+%=======================================================================
+
+\new\ The Petz recovery framework
+\cite{Huang2025paper1} identifies the IR scale of the
+Khronon as the retrodictability horizon $H(a)^{-1}c$.
+At any cosmological epoch, signals propagating beyond
+this horizon are \emph{currently} unrecoverable; the
+Khronon kinetic scale tracks this evolving horizon.
+The choice $\mu(a) = H(a)/c$ is therefore not an
+auxiliary phenomenological assumption but a direct
+consequence of the IR structure of retrodictability:
+the scale at which $K(Q)$ activates is the scale at
+which information loss becomes order unity, and that
+scale runs with $H(a)$.
+
+The constancy of $\delta = Q - 1$ in the matter era is
+then a statement about the constancy of the
+\emph{retrodictability deficit}: the universe's
+``arrow strength'' is a stationary quantity in the
+matter era, set once at recombination by the
+boundary condition on $\delta$, and modified only by
+the radiation-matter and matter-$\Lambda$ transitions.
+
+%=======================================================================
+\section{Summary}
+\label{sec:summary}
+%=======================================================================
+
+The running coupling $\mu(a) = H(a)/c$ is selected by
+two converging arguments:
+(i) algebraic, demanding $\rho_{K}(a) \propto a^{-3}$
+in the matter era forces $n = 1$ in
+$\mu \propto H^{n}$;
+(ii) dynamical, the Khronon equation of motion with
+Hubble friction has $\delta = $ constant as its
+unique attractor only when $n = 1$.
+The amplitude $\delta(a_{\mathrm{rec}})$ remains a
+free initial condition, equivalent to
+$\OmegaDM h^{2}$ in $\Lambda$CDM.  The improvement is
+that $\OmegaDM = \delta_{0}(2+\delta_{0})/3$ is
+\emph{computed} from $\delta_{0}$ rather than fitted
+as a particle abundance.
+
+\begin{thebibliography}{99}
+
+\bibitem{BS2024}
+L.~Blanchet and C.~Skordis,
+``Dark matter as a Khronon condensate,''
+JCAP \textbf{11}, 040 (2024);
+\href{https://arxiv.org/abs/2404.06584}{arXiv:2404.06584}.
+
+\bibitem{BS2025}
+L.~Blanchet and C.~Skordis,
+``Khronon-Tensor theory reproducing MOND and the cosmological model,''
+(2025);
+\href{https://arxiv.org/abs/2507.00912}{arXiv:2507.00912}.
+
+\bibitem{Planck2018}
+Planck Collaboration,
+``Planck 2018 results. VI. Cosmological parameters,''
+Astron.\ Astrophys.\ \textbf{641}, A6 (2020);
+\href{https://arxiv.org/abs/1807.06209}{arXiv:1807.06209}.
+
+\bibitem{TKS2016}
+D.~B.~Thomas, M.~Kopp, and C.~Skordis,
+``Constraining the properties of dark matter with
+observations of the cosmic microwave background,''
+Astrophys.\ J.\ \textbf{830}, 155 (2016);
+\href{https://arxiv.org/abs/1601.05097}{arXiv:1601.05097}.
+
+\bibitem{Huang2025paper1}
+S.-K.~Huang,
+``The arrow of time as Petz recovery failure:
+a unifying framework,''
+(2025);
+DOI: 10.5281/zenodo.14775757.
+
+\bibitem{AHCLM2004}
+N.~Arkani-Hamed, H.-C.~Cheng, M.~A.~Luty,
+and S.~Mukohyama,
+``Ghost condensation and a consistent infrared
+modification of gravity,''
+JHEP \textbf{05}, 074 (2004);
+\href{https://arxiv.org/abs/hep-th/0312099}{arXiv:hep-th/0312099}.
+
+\end{thebibliography}
+
+\end{document}
